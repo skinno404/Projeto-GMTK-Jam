@@ -1,5 +1,13 @@
-up = keyboard_check(ord("W"));
-down = keyboard_check(ord("S"));
-left = keyboard_check(ord("A"));
-right = keyboard_check(ord("D"));
+up = keyboard_check(up_key);
+down = keyboard_check(down_key);
+left = keyboard_check(left_key);
+right = keyboard_check(right_key);
 
+attack_key = mouse_check_button_pressed(mb_right);
+shot_key = mouse_check_button(mb_left);
+
+hp -= 0.025;
+
+hp = clamp(hp, 0, max_hp);
+
+script_execute(estate);
