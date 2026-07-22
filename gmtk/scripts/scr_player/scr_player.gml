@@ -55,9 +55,10 @@ function scr_player_movement(){
 
 	}
 
-	if shot_key and can_shot{
+	if shot_key and can_shot && ammo_atual > 0 && !global.card{
 
 		can_shot = false;
+		ammo_atual -=1;
 		var _shot = instance_create_depth(x + lengthdir_x(28, aim_direction), y + lengthdir_y(28, aim_direction), 0, obj_player_shot);
 		_shot.start_x = x;
 		_shot.start_y = y;
@@ -65,7 +66,22 @@ function scr_player_movement(){
 		_shot.direction = aim_direction;
 		_shot.image_angle = aim_direction;
 		alarm[alarms.shot] = shot_cooldown;
+		o_gui_control.squash = true;
 
+	}else if(ammo_atual <= 0){
+		if(alarm[2] < 0){
+			alarm[2] = ammo_delay;
+			o_gui_control.squash = true;
+		}
+	}
+
+	var reload_key = keyboard_check_pressed(ord("R"));
+
+	if(reload_key){
+		if(alarm[2] < 0){
+			alarm[2] = ammo_delay;
+			o_gui_control.squash = true;
+		}
 	}
 
 	hspd = lengthdir_x(move_spd, move_dir);

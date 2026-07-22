@@ -1,4 +1,4 @@
-lifetime = 300;
+lifetime = 1500;
 life = 0;
 start_x = 0;
 start_y = 0;

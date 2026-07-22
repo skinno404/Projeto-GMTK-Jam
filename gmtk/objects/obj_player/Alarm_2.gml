@@ -1,0 +1,1 @@
+ammo_atual = ammo_max;

@@ -25,7 +25,7 @@ if distance_to_point(start_x, start_y) > 16{
 
 }
 
-if distance_to_point(start_x, start_y) > 225{
+if distance_to_point(start_x, start_y) > 350{
 
 	instance_destroy();
 

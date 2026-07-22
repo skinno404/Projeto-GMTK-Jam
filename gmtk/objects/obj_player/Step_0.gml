@@ -11,3 +11,9 @@ hp -= 0.025;
 hp = clamp(hp, 0, max_hp);
 
 script_execute(estate);
+
+var test = keyboard_check_pressed(ord("L"));
+
+if(test){
+	global.card = true;	
+}
