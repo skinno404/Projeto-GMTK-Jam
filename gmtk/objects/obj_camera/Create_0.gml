@@ -1,8 +1,9 @@
 camera_width = 720;
 camera_height = 405;
-view_width = 1366;
-view_height = 780;
+view_width = 1920;
+view_height = 1080;
 camera_spd = 0.1;
+window_set_fullscreen(true);
 
 zoom = 1;
 zoom_extra = 0;
@@ -12,7 +13,7 @@ target = obj_player;
 deadzone = 32;
 offset = 0;
 offset_add = 0;
-use_mouse = false;
+use_mouse = true;
 mouse_offsetx = 0;
 mouse_offsety = 0;
 mouse_distance = 30;
@@ -31,7 +32,7 @@ view_set_visible(view_id, true);
 view_set_hport(view_id, view_height);
 view_set_wport(view_id, view_width);
 
-camera_id = camera_create_view(0, 20, camera_width, camera_height);
+camera_id = camera_create_view(0, 0, camera_width, camera_height);
 
 //window_set_position(0, 0);
 

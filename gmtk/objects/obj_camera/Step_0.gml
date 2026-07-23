@@ -32,7 +32,7 @@ mouse_offsetx = mouse_x - follow_x;
 mouse_offsety = mouse_y - follow_y;
 
 mouse_offsetx = clamp(mouse_offsetx, -mouse_distance, mouse_distance);
-mouse_offsety = clamp(mouse_offsety, -mouse_distance, mouse_distance);
+mouse_offsety = clamp(mouse_offsety, -mouse_distance/2, mouse_distance/2);
 
 offset = (target.hspd * 2.25);
 

@@ -1,3 +1,11 @@
+if life <= 0{
+
+	audio_stop_sound(snd_pistol_shot);
+	audio_emitter_position(shot_sound_emitter, sign(obj_camera.x - x), sign(obj_camera.y - y), 0);
+	audio_play_sound_on(shot_sound_emitter, snd_pistol_shot, 0, 12, 0.5, 0, shot_pitch + random_range(-0.05, 0.15));
+
+}
+
 if life >= lifetime{
 
 	instance_destroy();
@@ -6,7 +14,7 @@ if life >= lifetime{
 
 var _hit_list = ds_list_create();
 
-if instance_place_list(x, y, obj_enemy, _hit_list, 0){
+if instance_place_list(x, y, obj_enemy, _hit_list, true) {
 
 	for (var i = 0; i < ds_list_size(_hit_list); i ++) {
 

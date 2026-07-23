@@ -42,21 +42,34 @@ function scr_player_movement(){
 
 	if hspd != 0 or vspd != 0{
 
+		if step_cd <= 0{
+
+			step_cd = irandom_range(18, 22);
+			audio_stop_sound(snd_step);
+			audio_emitter_position(player_audio_emitter, sign(obj_camera.x - x) * 0.65, sign(obj_camera.y - y) * 0.65, 0);
+			audio_play_sound_on(player_audio_emitter, snd_step, 0, 2, 0.3, 0, random_range(0.98, 1.05));
+
+		}else{
+
+			step_cd --;
+
+		}
+
 		sprite_index = spr_player_run;
 		move_spd = spd;
 
 	}else{
 
 		sprite_index = spr_player_idle;
-		image_xscale = 1;
 		move_spd = 0;
+		step_cd = 4;
 
 	}
 
 	if attack_key and can_attack{
 
 		can_attack = false;
-		var _atk = instance_create_depth(x + lengthdir_x(24, aim_direction), y - 6 + lengthdir_y(24, aim_direction), 0, obj_player_atk);
+		var _atk = instance_create_depth(x + lengthdir_x(24, aim_direction), y - 12 + lengthdir_y(24, aim_direction), 0, obj_player_atk);
 		_atk.direction = aim_direction;
 		_atk.image_angle = aim_direction;
 		_atk.source = self;
@@ -64,15 +77,11 @@ function scr_player_movement(){
 
 	}
 
-	if shot_key and can_shot && ammo_atual > 0 && !global.card{
-
-		audio_stop_sound(snd_pistol_shot);
-		audio_emitter_position(player_audio_emitter, sign(obj_camera.x - x) * 0.65, sign(obj_camera.y - y) * 0.65, 0);
-		audio_play_sound_on(player_audio_emitter, snd_pistol_shot, 0, 2, 0.2, 0, (ammo_atual)/(ammo_atual + 0.25));
+	if shot_key and can_shot && ammo_atual > 0 && alarm[2] <= 0{
 
 		can_shot = false;
 		ammo_atual -= 1;
-		var _shot = instance_create_depth(x + lengthdir_x(24, aim_direction), y - 6 + lengthdir_y(24, aim_direction), 0, obj_player_shot);
+		var _shot = instance_create_depth(x + lengthdir_x(24, aim_direction), y - 12 + lengthdir_y(24, aim_direction), 0, obj_player_shot);
 		_shot.start_x = x;
 		_shot.start_y = y;
 		_shot.source = self;

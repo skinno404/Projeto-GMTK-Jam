@@ -29,7 +29,7 @@ can_attack = true;
 atk_cooldown = 15;
 
 can_shot = true;
-shot_cooldown = 12;
+shot_cooldown = 9;
 
 aim_direction = 0;
 aim_start_x = 0;
@@ -38,11 +38,13 @@ aim_distance = 28;
 
 hp = 10;
 max_hp = 10;
-hp_gain = 3.25;
+hp_gain = 3.4;
 
 ammo_max = 5;
 ammo_atual = ammo_max;
 ammo_delay = 65;
+
+step_cd = 0;
 
 player_audio_emitter = audio_emitter_create();
 

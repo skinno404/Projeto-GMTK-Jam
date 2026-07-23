@@ -1,3 +1,11 @@
+if life <= 0{
+
+	audio_stop_sound(snd_enemy_shot);
+	audio_emitter_position(shot_sound_emitter, sign(obj_camera.x - x), sign(obj_camera.y - y), 0);
+	audio_play_sound_on(shot_sound_emitter, snd_enemy_shot, 0, 12, 0.7, 0, shot_pitch + random_range(-0.05, 0.15));
+
+}
+
 if life >= lifetime{
 
 	instance_destroy();
@@ -6,8 +14,14 @@ if life >= lifetime{
 
 if place_meeting(x, y, obj_player){
 
-	obj_player.hp -= 1.25;
-	instance_destroy();
+	if hit == false{
+
+		hit = true;
+		obj_player.hp -= 1.25;
+		speed = 0;
+		image_alpha = 0;
+
+	}
 
 }
 
@@ -17,7 +31,7 @@ if distance_to_point(start_x, start_y) > 16{
 
 }
 
-if distance_to_point(start_x, start_y) > 300{
+if distance_to_point(start_x, start_y) > 500{
 
 	instance_destroy();
 

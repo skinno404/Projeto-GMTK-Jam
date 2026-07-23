@@ -4,7 +4,7 @@ function scr_enemy_shot(){
 
 	if take_turn == true{
 
-		if abs(obj_player.x - x) < aggro_range and abs(obj_player.y - y) < aggro_range and !collision_line(x, y, obj_player.x, obj_player.y, obj_collision, true, true){
+		if abs(obj_player.x - x) < aggro_range and abs(obj_player.y - y) < aggro_range and !collision_line(x, y, obj_player.x, obj_player.y, obj_collision, false, false){
 
 			if path_exists(path){
 
@@ -28,7 +28,7 @@ function scr_enemy_shot(){
 			if mp_potential_path_object(path, obj_player.x, obj_player.y, 3, 1.05, obj_collision){
 
 				take_turn = false;
-				alarm[1] = 20;
+				alarm[1] = 10;
 				path_start(path, 2.8, path_action_stop, false);
 
 			}
