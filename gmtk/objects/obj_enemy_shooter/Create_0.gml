@@ -6,6 +6,10 @@ enum Ealarms{
 
 }
 
+path = path_add();
+global.path_find = mp_grid_create(0, 0, 128, 128, 16, 16);
+
+free_sight = false;
 aggro_range = 225;
 shot_cooldown = 45;
 can_shot = false;

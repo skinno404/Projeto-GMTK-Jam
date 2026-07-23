@@ -4,11 +4,17 @@ function scr_enemy_shot(){
 
 	if take_turn == true{
 
-		if abs(obj_player.x - x) < aggro_range and abs(obj_player.y - y) < aggro_range{
+		if abs(obj_player.x - x) < aggro_range and abs(obj_player.y - y) < aggro_range and !collision_line(x, y, obj_player.x, obj_player.y, obj_collision, true, true){
+
+			if path_exists(path){
+
+				path_clear_points(path);
+
+			}
 
 			take_turn = false;
 			alarm[1] = shot_cooldown;
-			var _shot = instance_create_depth(x + clamp(obj_player.x - x, -16, 16), y + clamp(obj_player.y - y, -16, 16), 0, obj_enemy_shot);
+			var _shot = instance_create_depth(x + lengthdir_x(24, aim_direction), y + lengthdir_y(24, aim_direction), 0, obj_enemy_shot);
 			_shot.start_x = x;
 			_shot.start_y = y;
 			_shot.source = self;
@@ -17,11 +23,15 @@ function scr_enemy_shot(){
 
 		}else{
 
-			hspd = lengthdir_x(2.25, aim_direction);
-			vspd = lengthdir_y(2.25, aim_direction);
+			path = path_add();
 
-			x += hspd;
-			y += vspd;
+			if mp_potential_path_object(path, obj_player.x, obj_player.y, 3, 1.05, obj_collision){
+
+				take_turn = false;
+				alarm[1] = 20;
+				path_start(path, 2.8, path_action_stop, false);
+
+			}
 
 		}
 

@@ -9,6 +9,7 @@ up_key = ord("W");
 down_key = ord("S");
 left_key = ord("A");
 right_key = ord("D");
+reload_key = ord("R");
 attack_key = mb_right;
 shot_key = mb_left;
 
@@ -28,7 +29,7 @@ can_attack = true;
 atk_cooldown = 15;
 
 can_shot = true;
-shot_cooldown = 8;
+shot_cooldown = 12;
 
 aim_direction = 0;
 aim_start_x = 0;
@@ -37,11 +38,13 @@ aim_distance = 28;
 
 hp = 10;
 max_hp = 10;
-hp_gain = 2;
+hp_gain = 3.25;
 
 ammo_max = 5;
 ammo_atual = ammo_max;
-ammo_delay = 45;
+ammo_delay = 65;
+
+player_audio_emitter = audio_emitter_create();
 
 if !instance_exists(obj_camera){
 

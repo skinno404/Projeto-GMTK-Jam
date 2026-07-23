@@ -23,7 +23,7 @@
   ],
   "name":"spr_player_shot",
   "nineSlice":null,
-  "origin":9,
+  "origin":3,
   "parent":{
     "name":"Sprites Player",
     "path":"folders/sprites/Sprites Player.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":3,
+    "xorigin":0,
     "yorigin":2,
   },
   "swatchColours":null,

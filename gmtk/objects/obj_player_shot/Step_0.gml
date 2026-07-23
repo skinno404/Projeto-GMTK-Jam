@@ -19,13 +19,13 @@ if instance_place_list(x, y, obj_enemy, _hit_list, 0){
 
 }
 
-if distance_to_point(start_x, start_y) > 16{
+if distance_to_point(start_x, start_y) > 350{
 
-	//speed = speed * 15;
+	instance_destroy();
 
 }
 
-if distance_to_point(start_x, start_y) > 350{
+if place_meeting(x, y, obj_collision){
 
 	instance_destroy();
 

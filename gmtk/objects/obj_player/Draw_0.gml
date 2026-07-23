@@ -1,6 +1,6 @@
 draw_self();
 
-draw_text(x, y - 64, hp);
+draw_text(x, y - 64, (hp));
 
 	var x_ = x-sprite_get_width(spr_player)/2.5;
 	var y_ = y+20;

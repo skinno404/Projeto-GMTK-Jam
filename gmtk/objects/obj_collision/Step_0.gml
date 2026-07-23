@@ -1,0 +1,1 @@
+mp_grid_add_instances(global.path_find, self, false);
