@@ -21,13 +21,13 @@ right = 0;
 hspd = 0;
 vspd = 0;
 
-spd = 4;
+spd = 6;
 move_dir = 0;
 move_spd = 0;
 
 attack = 0;
 can_attack = true;
-atk_cooldown = 15;
+atk_cooldown = 7;
 
 shot = 0;
 can_shot = true;
@@ -44,7 +44,7 @@ hp_gain = 3.4;
 
 ammo_max = 5;
 ammo_atual = ammo_max;
-ammo_delay = 65;
+ammo_delay = 30;
 
 step_cd = 0;
 

@@ -1,5 +1,11 @@
 event_inherited();
 
+if(obj_player.x > x){
+	image_xscale = 1;	
+}else{
+	image_xscale = -1;	
+}
+
 if !collision_line(x, y, obj_player.x, obj_player.y, obj_collision, true, true){
 
 	free_sight = true;
@@ -11,9 +17,14 @@ if !collision_line(x, y, obj_player.x, obj_player.y, obj_collision, true, true){
 }
 
 aim_direction = point_direction(x, y, obj_player.x, obj_player.y);
+if(instance_exists(obj_player_shot)){
+	if(parry = -1){
+	parry = choose(true,true,true,true,true,false);
+	}
+}
 
 if distance_to_object(obj_player_shot) < 80{
-
+	if(parry = true){
 		take_turn = true;
 		can_attack = false;
 		path_clear_points(path);
@@ -25,7 +36,8 @@ if distance_to_object(obj_player_shot) < 80{
 		_attack.source = self;
 		_attack.image_angle = aim_direction;
 		_attack.direction = aim_direction;
-
+		parry = -1;
+	}
 }
 
 script_execute(estate);

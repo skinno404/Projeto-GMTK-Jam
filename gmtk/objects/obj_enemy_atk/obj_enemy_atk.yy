@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_atk",
-    "path":"sprites/spr_player_atk/spr_player_atk.yy",
+    "name":"spr_enemy_atk",
+    "path":"sprites/spr_enemy_atk/spr_enemy_atk.yy",
   },
   "spriteMaskId":null,
   "visible":true,

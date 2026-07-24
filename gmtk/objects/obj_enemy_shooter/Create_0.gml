@@ -8,7 +8,7 @@ enum Ealarms{
 
 path = path_add();
 
-spd = 3.2;
+spd = 4;
 free_sight = false;
 aggro_range = 225;
 shot_cooldown = 35;

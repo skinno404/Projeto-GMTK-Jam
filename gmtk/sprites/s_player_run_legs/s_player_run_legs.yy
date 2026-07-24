@@ -70,7 +70,7 @@
     },
     "name":"s_player_run_legs",
     "playback":1,
-    "playbackSpeed":16.0,
+    "playbackSpeed":20.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
