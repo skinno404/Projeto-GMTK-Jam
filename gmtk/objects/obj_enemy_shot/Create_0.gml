@@ -7,6 +7,7 @@ source = 0;
 shot_sound = snd_enemy_shot;
 shot_pitch = 1;
 hit = false;
+can_destroy = true;
 
 speed = 2;
 image_angle = direction;

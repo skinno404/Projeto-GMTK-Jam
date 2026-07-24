@@ -31,6 +31,7 @@
     {"id":{"name":"o_gui_control","path":"objects/o_gui_control/o_gui_control.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},},
+    {"id":{"name":"obj_enemy_atk","path":"objects/obj_enemy_atk/obj_enemy_atk.yy",},},
     {"id":{"name":"obj_enemy_shooter","path":"objects/obj_enemy_shooter/obj_enemy_shooter.yy",},},
     {"id":{"name":"obj_enemy_shot","path":"objects/obj_enemy_shot/obj_enemy_shot.yy",},},
     {"id":{"name":"obj_enemy_slasher","path":"objects/obj_enemy_slasher/obj_enemy_slasher.yy",},},

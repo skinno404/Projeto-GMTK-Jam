@@ -3,10 +3,14 @@ down = keyboard_check(down_key);
 left = keyboard_check(left_key);
 right = keyboard_check(right_key);
 
-attack_key = mouse_check_button_pressed(mb_right);
-shot_key = mouse_check_button(mb_left);
+attack = mouse_check_button_pressed(attack_key);
+shot = mouse_check_button(shot_key);
 
-hp -= 0.02;
+if tutorial_start == false{
+
+	hp -= 0.02;
+
+}
 
 hp = clamp(hp, 0, max_hp);
 

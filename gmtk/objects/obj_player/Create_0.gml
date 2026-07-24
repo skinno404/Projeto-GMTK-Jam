@@ -25,9 +25,11 @@ spd = 4;
 move_dir = 0;
 move_spd = 0;
 
+attack = 0;
 can_attack = true;
 atk_cooldown = 15;
 
+shot = 0;
 can_shot = true;
 shot_cooldown = 9;
 
@@ -59,3 +61,5 @@ global.atual_weapon = s_gun;
 atual_sprite = 0;
 offset_x = 1;
 offset_y = 1;
+
+tutorial_start = true;
