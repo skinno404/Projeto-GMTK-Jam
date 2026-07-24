@@ -55,3 +55,7 @@ if !instance_exists(obj_camera){
 }
 
 estate = scr_player_movement;
+global.atual_weapon = s_gun;
+atual_sprite = 0;
+offset_x = 1;
+offset_y = 1;

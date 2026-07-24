@@ -56,13 +56,18 @@ function scr_player_movement(){
 		}
 
 		sprite_index = spr_player_run;
+		atual_sprite = s_gun_run;
+		
 		move_spd = spd;
 
 	}else{
 
-		sprite_index = spr_player_idle;
+		sprite_index = spr_player_idle_ok;
+		atual_sprite = s_gun;
+		offset_x = 2;
+		offset_y = 1.5;
+	
 		move_spd = 0;
-		step_cd = 4;
 
 	}
 
@@ -81,7 +86,7 @@ function scr_player_movement(){
 
 		can_shot = false;
 		ammo_atual -= 1;
-		var _shot = instance_create_depth(x + lengthdir_x(24, aim_direction), y - 12 + lengthdir_y(24, aim_direction), 0, obj_player_shot);
+		var _shot = instance_create_depth(x + lengthdir_x(10, aim_direction), y - 19 + lengthdir_y(10, aim_direction), 0, obj_player_shot);
 		_shot.start_x = x;
 		_shot.start_y = y;
 		_shot.source = self;

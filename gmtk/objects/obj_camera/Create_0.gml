@@ -3,9 +3,9 @@ camera_height = 405;
 view_width = 1920;
 view_height = 1080;
 camera_spd = 0.1;
-window_set_fullscreen(true);
+window_set_fullscreen(false);
 
-zoom = 1;
+zoom = 0.8;
 zoom_extra = 0;
 zoom_extra_offset = 0.1;
 view_id = 0;
