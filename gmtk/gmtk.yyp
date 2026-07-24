@@ -62,7 +62,7 @@
     {"id":{"name":"s_player_run_legs","path":"sprites/s_player_run_legs/s_player_run_legs.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_player_atk","path":"sprites/spr_player_atk/spr_player_atk.yy",},},
-    {"id":{"name":"spr_player_idle_ok","path":"sprites/spr_player_idle_ok/spr_player_idle_ok.yy",},},
+    {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
     {"id":{"name":"spr_player_run","path":"sprites/spr_player_run/spr_player_run.yy",},},
     {"id":{"name":"spr_player_shot","path":"sprites/spr_player_shot/spr_player_shot.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},

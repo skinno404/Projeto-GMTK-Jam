@@ -62,7 +62,7 @@ function scr_player_movement(){
 
 	}else{
 
-		sprite_index = spr_player_idle_ok;
+		sprite_index = spr_player_idle;
 		atual_sprite = s_gun;
 		offset_x = 2;
 		offset_y = 1.5;
