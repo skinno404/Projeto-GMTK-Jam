@@ -28,6 +28,7 @@
   "name":"gmtk",
   "resources":[
     {"id":{"name":"o_card","path":"objects/o_card/o_card.yy",},},
+    {"id":{"name":"o_depth_control","path":"objects/o_depth_control/o_depth_control.yy",},},
     {"id":{"name":"o_gui_control","path":"objects/o_gui_control/o_gui_control.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},},
@@ -57,6 +58,7 @@
     {"id":{"name":"s_bullet_gui","path":"sprites/s_bullet_gui/s_bullet_gui.yy",},},
     {"id":{"name":"s_card","path":"sprites/s_card/s_card.yy",},},
     {"id":{"name":"s_gun_run","path":"sprites/s_gun_run/s_gun_run.yy",},},
+    {"id":{"name":"s_gun_shooter","path":"sprites/s_gun_shooter/s_gun_shooter.yy",},},
     {"id":{"name":"s_gun","path":"sprites/s_gun/s_gun.yy",},},
     {"id":{"name":"s_katana","path":"sprites/s_katana/s_katana.yy",},},
     {"id":{"name":"s_player_run_legs","path":"sprites/s_player_run_legs/s_player_run_legs.yy",},},
