@@ -3,6 +3,7 @@
 asset_add_tags(obj_player, TAG_DEPTHSORT, asset_object);
 asset_add_tags(obj_enemy_drone, TAG_DEPTHSORT, asset_object);
 asset_add_tags(obj_enemy_robot, TAG_DEPTHSORT, asset_object);
+asset_add_tags(obj_enemy, TAG_DEPTHSORT, asset_object);
 
 depth_grid = ds_grid_create(2, 0);
 depth_array = tag_get_asset_ids(TAG_DEPTHSORT,asset_object);

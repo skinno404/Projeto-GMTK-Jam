@@ -8,7 +8,7 @@ shot = mouse_check_button(shot_key);
 
 if tutorial_start == true{
 
-	hp -= 0.01;
+	hp -= 0.03;
 
 	if hp <= 2{
 

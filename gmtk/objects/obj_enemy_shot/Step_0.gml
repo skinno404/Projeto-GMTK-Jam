@@ -39,4 +39,12 @@ if distance_to_point(start_x, start_y) > 350{
 
 }
 
+if place_meeting(x, y, obj_collision){
+
+	scr_particle_magic(x,y,direction,c_red,c_red);
+	scr_particle_project(x,y,c_red);
+	instance_destroy();
+	
+}
+
 life ++;

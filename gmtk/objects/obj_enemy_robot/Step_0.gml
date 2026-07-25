@@ -19,7 +19,7 @@ if !collision_line(x, y, obj_player.x, obj_player.y, obj_collision, true, true){
 aim_direction = point_direction(x, y, obj_player.x, obj_player.y);
 if(instance_exists(obj_player_shot)){
 	if(parry = -1){
-	parry = choose(true,true,true,true,true,false);
+	parry = choose(true,true,true,true,true,true,true,true,true,true,false);
 	}
 }
 

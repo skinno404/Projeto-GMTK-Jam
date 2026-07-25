@@ -16,7 +16,14 @@ function scr_enemy_slash(){
 			_attack.direction = aim_direction;
 
 		}else{
-
+			if(t_part){
+			scr_particle_dust(x,y-5,aim_direction,c_gray,c_white);
+			t_part = false;
+			}else{
+				if(alarm[2] < 0){
+					alarm[2] = t_delay;	
+				}
+			}
 			path = path_add();
 
 			if mp_grid_path(global.path_find, path, x, y, obj_player.x, obj_player.y, true){

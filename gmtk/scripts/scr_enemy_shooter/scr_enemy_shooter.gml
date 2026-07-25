@@ -9,6 +9,13 @@ function scr_enemy_shot(){
 			path_clear_points(path);
 			take_turn = false;
 			alarm[1] = shot_cooldown;
+			
+			var dir = point_direction(x,y,obj_player.x,obj_player.y);
+			var x_part = x + lengthdir_x(+19,dir);
+			var y_part = y + lengthdir_y(sprite_get_width(s_gun_shooter),dir);
+			scr_particle_damage(x_part,y_part,aim_direction,c_red,c_gray);
+			scr_particle_damage(x_part,y_part,aim_direction,c_red,c_gray);
+
 			var _shot = instance_create_depth(x + lengthdir_x(24, aim_direction), y - 12 + lengthdir_y(24, aim_direction), 0, obj_enemy_shot);
 			_shot.start_x = x;
 			_shot.start_y = y;

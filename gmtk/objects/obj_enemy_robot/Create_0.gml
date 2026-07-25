@@ -12,3 +12,6 @@ estate = scr_enemy_idle;
 atk_estate = scr_enemy_slash;
 
 parry = -1;
+
+t_part = false;
+t_delay = 6;

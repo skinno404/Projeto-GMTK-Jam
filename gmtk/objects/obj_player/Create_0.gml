@@ -27,7 +27,7 @@ move_spd = 0;
 
 attack = 0;
 can_attack = true;
-atk_cooldown = 7;
+atk_cooldown = 20;
 
 shot = 0;
 can_shot = true;
@@ -70,3 +70,6 @@ offset_x = 1;
 offset_y = 1;
 
 tutorial_start = true;
+
+t_part = false;
+t_delay = 5;

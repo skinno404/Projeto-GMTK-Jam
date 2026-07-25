@@ -1,4 +1,3 @@
-image_blend = c_yellow;
 lifetime = 1000;
 life = 0;
 start_x = 0;

@@ -19,13 +19,16 @@ if life >= lifetime{
 if instance_place_list(x, y, obj_enemy_shot, shot_parry_list, true){
 
 	var _shot_list_checked = ds_list_create();
-
+	image_index = 1;
+	scr_particle_project(x+sprite_get_width(sprite_index),y,c_purple);
+	scr_particle_project(x+sprite_get_width(sprite_index),y,c_purple);
+	scr_particle_project(x+sprite_get_width(sprite_index),y,c_purple);
 	for (var i = 0; i < ds_list_size(shot_parry_list); i ++) {
 
 		if instance_exists(shot_parry_list[| i]){
 
 			var _dir = point_direction(x, y, mouse_x, mouse_y);
-
+			
 			var _deflect = instance_create_depth(shot_parry_list[| i].x, shot_parry_list[| i].y, 0, obj_player_shot);
 			_deflect.speed = shot_parry_list[| i].speed /2 + 12;
 			_deflect.start_x = shot_parry_list[| i].x;
@@ -55,6 +58,8 @@ if instance_place_list(x, y, obj_enemy_shot, shot_parry_list, true){
 	obj_camera.zoom_extra = 0.12;
 	obj_camera.zoom_extra_offset = 0.075;
 
+}else{
+	image_index = 0;	
 }
 
 if instance_place_list(x, y, obj_enemy, enemy_hit_list, true){
@@ -64,8 +69,9 @@ if instance_place_list(x, y, obj_enemy, enemy_hit_list, true){
 		source.hp += source.hp_gain;
 		obj_camera.zoom_extra = 0.085;
 		obj_camera.zoom_extra_offset = 0.05;
-		enemy_hit_list[| i].hp -= 5;
-
+		if(instance_exists(enemy_hit_list[| i])){
+			enemy_hit_list[| i].hp -= 5;
+		}
 	}
 
 }

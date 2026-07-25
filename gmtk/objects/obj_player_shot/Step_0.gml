@@ -30,15 +30,27 @@ if instance_place_list(x, y, obj_enemy, _hit_list, true) {
 }
 
 if distance_to_point(start_x, start_y) > obj_player.shot_range{
-
+	
+	scr_particle_magic(x,y,direction,c_blue,c_blue);
+	scr_particle_project(x,y,c_blue);
 	instance_destroy();
 
 }
 
 if place_meeting(x, y, obj_collision){
 
+	scr_particle_magic(x,y,direction,c_blue,c_blue);
+	scr_particle_project(x,y,c_blue);
 	instance_destroy();
-
+	
 }
 
 life ++;
+
+if(t_part){
+		scr_particle_project(x,y,c_blue);
+}else{
+	if(alarm[0] < 0){
+		alarm[0] = t_delay;
+	}
+}

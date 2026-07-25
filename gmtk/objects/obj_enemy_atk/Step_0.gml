@@ -17,7 +17,7 @@ if life >= lifetime{
 }
 
 if instance_place_list(x, y, obj_player_shot, shot_parry_list, true){
-
+	image_index = 1;	
 	parry = true;
 
 	var _shot_list_checked = ds_list_create();
@@ -52,6 +52,8 @@ if instance_place_list(x, y, obj_player_shot, shot_parry_list, true){
 	audio_emitter_position(sword_sound_emitter, obj_player.x - x, obj_player.y - y, 0);
 	audio_play_sound_on(sword_sound_emitter, snd_parry, 0, 12, 0.5, 0, swing_pitch + random_range(-0.05, 0.05));
 
+}else{
+	image_index = 0;		
 }
 
 if parry{

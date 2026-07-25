@@ -10,3 +10,6 @@ image_angle = direction;
 
 
 shot_sound_emitter = audio_emitter_create();
+
+t_part = false;
+t_delay = 3;
