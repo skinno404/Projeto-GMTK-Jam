@@ -39,6 +39,9 @@
     "name":"spr_enemy_drone",
     "path":"sprites/spr_enemy_drone/spr_enemy_drone.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_enemy_drone",
+    "path":"sprites/spr_enemy_drone/spr_enemy_drone.yy",
+  },
   "visible":true,
 }

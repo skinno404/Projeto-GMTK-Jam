@@ -44,3 +44,8 @@ function scr_enemy_shot(){
 	}
 
 }
+function scr_enemy_dead_drone(){
+
+sprite_index = spr_enemy_drone_dead;
+	
+}

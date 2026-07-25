@@ -15,3 +15,5 @@ parry = -1;
 
 t_part = false;
 t_delay = 6;
+
+type = 2;

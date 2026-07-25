@@ -81,3 +81,5 @@ t_part = false;
 t_delay = 5;
 
 window_set_fullscreen(true);
+
+can_use_attack = false;

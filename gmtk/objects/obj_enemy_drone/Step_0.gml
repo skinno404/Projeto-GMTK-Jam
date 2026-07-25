@@ -1,7 +1,5 @@
 event_inherited();
 
-script_execute(estate);
-
 if(!can_target){
 	offset_y = approach(offset_y,target_down,0.5);
 	if(offset_y = target_down){
@@ -24,5 +22,4 @@ if(y+20 > obj_player.y){
 	
 }
 
-
-	
+script_execute(estate);

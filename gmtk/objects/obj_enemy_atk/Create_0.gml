@@ -9,3 +9,5 @@ sword_sound_emitter = audio_emitter_create();
 
 shot_parry_list = ds_list_create();
 enemy_hit_list = ds_list_create();
+
+always_top = true;

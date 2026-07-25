@@ -63,6 +63,14 @@ if instance_place_list(x, y, obj_enemy_shot, shot_parry_list, true){
 }
 
 if instance_place_list(x, y, obj_enemy, enemy_hit_list, true){
+	
+	var dummy = instance_place(x,y,o_dummy);
+	if(dummy != noone){
+		if(!hit_check_dummy){
+		dummy.hits += 1;	
+		hit_check_dummy = true
+		}
+	}
 
 	for (var i = 0; i < ds_list_size(enemy_hit_list); i ++) {
 

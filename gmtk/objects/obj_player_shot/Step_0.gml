@@ -15,6 +15,11 @@ if life >= lifetime{
 var _hit_list = ds_list_create();
 
 if instance_place_list(x, y, obj_enemy, _hit_list, true) {
+	
+	var dummy = instance_place(x,y,o_dummy);
+	if(dummy != noone){
+		dummy.hits += 1;	
+	}
 
 	for (var i = 0; i < ds_list_size(_hit_list); i ++) {
 

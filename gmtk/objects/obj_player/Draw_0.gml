@@ -35,23 +35,11 @@ if(aim_xscale != image_xscale){
 	}
 }
 
-if(my > y +64){
-
 draw_sprite_ext(sprite_index,image_index,x,y,aim_xscale,image_yscale,0,c_white,1);
 if(left && !right || up && !down || !left && right || !up && down){
 	draw_sprite_ext(s_player_run_legs,image_index,x,y,image_xscale,image_yscale,0,c_white,1);
 }
 draw_sprite_ext(atual_sprite,image_index,x_gun+sign(xs)*offset_x,y-sprite_get_height(spr_player)/2-offset_y,1,xs,dir,c_white,1);
-
-}else{
-	
-draw_sprite_ext(sprite_index,image_index,x,y,aim_xscale,image_yscale,0,c_white,1);
-if(left && !right || up && !down || !left && right || !up && down){
-	draw_sprite_ext(s_player_run_legs,image_index,x,y,image_xscale,image_yscale,0,c_white,1);
-}
-draw_sprite_ext(atual_sprite,image_index,x_gun+sign(xs)*offset_x,y-sprite_get_height(spr_player)/2-offset_y,1,xs,dir,c_white,1);
-
-}
 
 draw_text(x, y - 64, (hp));
 

@@ -27,7 +27,7 @@ function scr_player_collision(){
 }
 
 function scr_player_movement(){
-
+	
 	vspd = down - up;
 	hspd = right - left;
 
@@ -79,7 +79,7 @@ function scr_player_movement(){
 
 	}
 
-	if attack and can_attack{
+	if attack and can_attack and can_use_attack{
 		
 		can_attack = false;
 		var _atk = instance_create_depth(x + lengthdir_x(18, aim_direction), y - 12 + lengthdir_y(12, aim_direction), 0, obj_player_atk);
@@ -129,4 +129,9 @@ function scr_player_movement(){
 	x += hspd;
 	y += vspd;
 
+}
+function scr_player_idle(){
+
+	sprite_index = spr_player_idle;
+	
 }

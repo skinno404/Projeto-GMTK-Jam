@@ -38,6 +38,9 @@
     "name":"spr_torret",
     "path":"sprites/spr_torret/spr_torret.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_torret",
+    "path":"sprites/spr_torret/spr_torret.yy",
+  },
   "visible":true,
 }
