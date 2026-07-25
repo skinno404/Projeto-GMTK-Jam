@@ -17,6 +17,7 @@ estate = scr_enemy_idle;
 atk_estate = scr_enemy_shot;
 
 player_dir2 = 0;
+player_dir = 0;
 
 target_up = -2;
 target_down = 2;

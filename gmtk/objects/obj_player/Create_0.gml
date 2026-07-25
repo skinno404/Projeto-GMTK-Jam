@@ -21,7 +21,7 @@ right = 0;
 hspd = 0;
 vspd = 0;
 
-spd = 6;
+spd = 5.5;
 move_dir = 0;
 move_spd = 0;
 
@@ -63,6 +63,12 @@ if !instance_exists(o_gui_control){
 
 }
 
+if !instance_exists(o_particle_global){
+
+	instance_create_depth(x, y, 12, o_particle_global);
+
+}
+
 estate = scr_player_movement;
 global.atual_weapon = s_gun;
 atual_sprite = 0;
@@ -73,3 +79,5 @@ tutorial_start = true;
 
 t_part = false;
 t_delay = 5;
+
+window_set_fullscreen(true);

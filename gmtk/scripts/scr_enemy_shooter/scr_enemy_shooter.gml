@@ -1,6 +1,10 @@
 function scr_enemy_shot(){
 
-	aim_direction = point_direction(x, y, obj_player.x, obj_player.y);
+	if instance_exists(obj_player){
+
+		aim_direction = point_direction(x, y, obj_player.x, obj_player.y);
+
+	}
 
 	if take_turn == true{
 

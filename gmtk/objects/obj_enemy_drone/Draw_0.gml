@@ -1,6 +1,10 @@
 draw_path(path, x, y, 1);
 
-var player_dir = point_direction(x,y,obj_player.x,obj_player.y);
+if instance_exists(obj_player){
+
+	player_dir = point_direction(x,y,obj_player.x,obj_player.y);
+
+}
 
 	if(obj_player.x > x){
 		image_xscale = -1;
