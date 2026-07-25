@@ -4,6 +4,7 @@ function scr_enemy_slash(){
 
 		if abs(obj_player.x - x) < atk_range and abs(obj_player.y - y) < atk_range and free_sight{
 
+			sprite_index = spr_enemy_robot_idle;
 			take_turn = false;
 			path_clear_points(path);
 			alarm[1] = slash_cooldown;
@@ -20,6 +21,7 @@ function scr_enemy_slash(){
 
 			if mp_grid_path(global.path_find, path, x, y, obj_player.x, obj_player.y, true){
 
+				sprite_index = spr_enemy_robot_run;
 				take_turn = false;
 				alarm[1] = 5;
 				path_start(path, spd, path_action_stop, false);

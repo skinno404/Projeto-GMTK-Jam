@@ -12,12 +12,14 @@ if life >= lifetime and can_destroy{
 
 }
 
-if place_meeting(x, y, obj_player) and can_destroy{
+if place_meeting(x, y, obj_player){
 
 	if hit == false{
 
 		hit = true;
 		obj_player.hp -= 1.25;
+		obj_camera.zoom_extra = -0.05;
+		obj_camera.zoom_extra_offset = 0.1;
 		speed = 0;
 		image_alpha = 0;
 
@@ -31,7 +33,7 @@ if distance_to_point(start_x, start_y) > 16{
 
 }
 
-if distance_to_point(start_x, start_y) > 500 and can_destroy{
+if distance_to_point(start_x, start_y) > 350{
 
 	instance_destroy();
 

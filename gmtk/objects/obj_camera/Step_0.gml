@@ -31,7 +31,7 @@ if abs(target.y - follow_y) > deadzone{
 mouse_offsetx = mouse_x - follow_x;
 mouse_offsety = mouse_y - follow_y;
 
-mouse_offsetx = clamp(mouse_offsetx, -mouse_distance/1.5, mouse_distance);
+mouse_offsetx = clamp(mouse_offsetx, -mouse_distance, mouse_distance);
 mouse_offsety = clamp(mouse_offsety, -mouse_distance/2, mouse_distance/2);
 
 offset = (target.hspd * 2.25);
@@ -60,6 +60,8 @@ if use_mouse{
 
 cam_x = clamp(cam_x, (camera_width * (zoom + zoom_extra) * 0.5), room_width - (camera_width * (zoom + zoom_extra) * 0.5));
 cam_y = clamp(cam_y, (camera_height * (zoom + zoom_extra) * 0.5), room_height - (camera_height * (zoom + zoom_extra) * 0.5));
+
+zoom_extra = lerp(zoom_extra, 0, zoom_extra_offset);
 
 x = lerp(x, cam_x + offset_add, camera_spd);
 y = lerp(y, cam_y, camera_spd);

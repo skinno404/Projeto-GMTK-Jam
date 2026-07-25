@@ -1,3 +1,5 @@
+global.path_find = mp_grid_create(-16, -16, 516, 516, 32, 32);
+
 function array_min(_array){
 
 	///@param array

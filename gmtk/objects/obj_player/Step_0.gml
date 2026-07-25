@@ -6,9 +6,15 @@ right = keyboard_check(right_key);
 attack = mouse_check_button_pressed(attack_key);
 shot = mouse_check_button(shot_key);
 
-if tutorial_start == false{
+if tutorial_start == true{
 
-	hp -= 0.02;
+	hp -= 0.01;
+
+	if hp <= 2{
+
+		hp = 2;
+
+	}
 
 }
 

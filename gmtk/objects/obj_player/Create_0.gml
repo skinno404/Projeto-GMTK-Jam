@@ -31,7 +31,8 @@ atk_cooldown = 7;
 
 shot = 0;
 can_shot = true;
-shot_cooldown = 9;
+shot_cooldown = 10;
+shot_range = 280;
 
 aim_direction = 0;
 aim_start_x = 0;
@@ -53,6 +54,12 @@ player_audio_emitter = audio_emitter_create();
 if !instance_exists(obj_camera){
 
 	instance_create_depth(x, y, 12, obj_camera);
+
+}
+
+if !instance_exists(o_gui_control){
+
+	instance_create_depth(x, y, 12, o_gui_control);
 
 }
 

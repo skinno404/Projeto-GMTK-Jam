@@ -19,6 +19,8 @@ if instance_place_list(x, y, obj_enemy, _hit_list, true) {
 	for (var i = 0; i < ds_list_size(_hit_list); i ++) {
 
 		source.hp += source.hp_gain;
+		obj_camera.zoom_extra = 0.05;
+		obj_camera.zoom_extra_offset = 0.075;
 		_hit_list[| i].hp -= 1;
 
 	}
@@ -27,7 +29,7 @@ if instance_place_list(x, y, obj_enemy, _hit_list, true) {
 
 }
 
-if distance_to_point(start_x, start_y) > 350{
+if distance_to_point(start_x, start_y) > obj_player.shot_range{
 
 	instance_destroy();
 

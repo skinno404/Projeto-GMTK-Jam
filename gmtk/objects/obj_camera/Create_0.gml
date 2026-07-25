@@ -2,10 +2,10 @@ camera_width = 720;
 camera_height = 405;
 view_width = 1920;
 view_height = 1080;
-camera_spd = 0.1;
+camera_spd = 0.05;
 window_set_fullscreen(false);
 
-zoom = 0.8;
+zoom = 0.9;
 zoom_extra = 0;
 zoom_extra_offset = 0.1;
 view_id = 0;
@@ -16,7 +16,7 @@ offset_add = 0;
 use_mouse = true;
 mouse_offsetx = 0;
 mouse_offsety = 0;
-mouse_distance = 30;
+mouse_distance = 80;
 
 follow_x = 0;
 follow_y = 0;
