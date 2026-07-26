@@ -52,6 +52,8 @@ hp = 10;
 max_hp = 10;
 hp_gain = 2.8;
 invulnerable = false;
+fight_or_flight = false;
+hit = false;
 
 ammo_max = 8;
 ammo_atual = ammo_max;
@@ -105,6 +107,7 @@ if !instance_exists(o_info_control){
 
 estate = scr_player_movement;
 global.atual_weapon = s_gun;
+global.died = false;
 atual_sprite = 0;
 offset_x = 1;
 offset_y = 1;
@@ -117,4 +120,3 @@ t_delay = 5;
 window_set_fullscreen(true);
 
 can_use_attack = true;
-global.died = false;

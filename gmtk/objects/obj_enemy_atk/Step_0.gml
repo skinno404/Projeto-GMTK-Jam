@@ -66,10 +66,11 @@ if parry{
 
 }
 
-if hit == false{
+if hit == false and obj_player.alarm[5] <= 170{
 
 	hit = true;
-	obj_player.hp -= 3.2;
+	obj_player.hp -= source.damage;
+	obj_player.hit = true;
 
 }
 

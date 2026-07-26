@@ -13,6 +13,8 @@ if(hp <= 0){
 
 	}else if type == "oreaseca"{
 
+		audio_stop_sound(snd_charge_up);
+		audio_stop_sound(snd_charge_loss);
 		audio_emitter_position(generic_enemy_emitter, obj_player.x - x, obj_player.y - y, 0);
 		audio_play_sound_on(generic_enemy_emitter, snd_drone_dying, 0, 12, 0.5, 0, random_range(0.9, 1.1));
 		yy = y + sprite_get_height(spr_enemy_torret_dead);
@@ -35,7 +37,7 @@ if(hp <= 0){
 
 }
 
-if !collision_line(x, y, obj_player.x, obj_player.y, obj_collision, true, true){
+if !collision_line(x, y, obj_player.x, obj_player.y - 8, obj_collision, true, true){
 
 	free_sight = true;
 

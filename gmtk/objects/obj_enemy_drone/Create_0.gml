@@ -15,6 +15,7 @@ shot_cooldown = 35;
 can_shot = false;
 estate = scr_enemy_idle;
 atk_estate = scr_enemy_shot;
+damage = 1;
 
 player_dir2 = 0;
 player_dir = 0;

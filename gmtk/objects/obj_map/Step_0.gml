@@ -88,16 +88,24 @@ if generate == true{
 
 				_steps_taken ++;
 
-				if random(100) <= 35 and _xx >= 8 and _steps_taken >= 4{
-				
-					var _enemy = instance_create_layer(_xx * cell_size + irandom(16), _yy * cell_size + irandom(16), "Instances", obj_enemy_drone);
-					global.enemy_count ++;
+				if random(100) <= 10 + ((global.level - 1) * 5) and _xx > 8 and _steps_taken >= 4{
 
-				}else if _xx >= 8 and _steps_taken >= irandom_range(7, 12){
+					if _xx < cell_h - 3{
 
-					global.enemy_count ++;
-					_steps_taken = 0;
-					var _enemy = instance_create_layer(_xx * cell_size + irandom(16), _yy * cell_size + irandom(16), "Instances", choose(obj_enemy_robot, obj_enemy_drone,obj_orea_seca));
+						var _enemy = instance_create_layer(_xx * cell_size + irandom(16), _yy * cell_size + irandom(16), "Instances", obj_enemy_drone);
+						global.enemy_count ++;
+
+					}
+
+				}else if _xx > 6 and _steps_taken >= irandom_range(7, 12) - ((global.level - 1) * 3){
+
+					if _xx < cell_h - 3{
+
+						global.enemy_count ++;
+						_steps_taken = 0;
+						var _enemy = instance_create_layer(_xx * cell_size + irandom(16), _yy * cell_size + irandom(16), "Instances", choose(obj_enemy_robot, obj_enemy_drone,obj_orea_seca));
+
+					}
 
 				}
 
@@ -132,6 +140,7 @@ if restart_map{
 	instance_destroy(obj_next_level);
 	instance_destroy(obj_player_shot);
 	instance_destroy(obj_player_atk);
+	global.enemy_count = 0;
 	only_one_player = false;
 
 }

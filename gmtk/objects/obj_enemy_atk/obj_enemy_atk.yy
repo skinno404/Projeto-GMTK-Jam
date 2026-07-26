@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_enemy_slash",
-    "path":"sprites/s_enemy_slash/s_enemy_slash.yy",
+    "name":"s_enemy_slash1",
+    "path":"sprites/s_enemy_slash1/s_enemy_slash1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -37,12 +37,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_robot_idle",
-    "path":"sprites/spr_enemy_robot_idle/spr_enemy_robot_idle.yy",
+    "name":"spr_enemy_robot_idle1",
+    "path":"sprites/spr_enemy_robot_idle1/spr_enemy_robot_idle1.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_enemy_robot_idle",
-    "path":"sprites/spr_enemy_robot_idle/spr_enemy_robot_idle.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

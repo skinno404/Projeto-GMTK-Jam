@@ -10,6 +10,7 @@ slash_cooldown = 45;
 can_attack = true;
 estate = scr_enemy_idle;
 atk_estate = scr_enemy_slash;
+damage = 2;
 
 parry = -1;
 

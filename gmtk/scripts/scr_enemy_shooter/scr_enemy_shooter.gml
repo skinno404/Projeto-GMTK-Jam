@@ -1,12 +1,12 @@
 function scr_enemy_shot(){
 
-	if instance_exists(obj_player) && !global.in_hud && !global.died && !global.show_controls{
+	if instance_exists(obj_player) && !global.in_hud{
 
 		aim_direction = point_direction(x, y, obj_player.x, obj_player.y);
 
 	}
 
-	if take_turn == true{
+	if take_turn == true and global.died == false{
 
 		if abs(obj_player.x - x) < aggro_range and abs(obj_player.y - y) < aggro_range and !collision_line(x, y, obj_player.x, obj_player.y, obj_collision, false, false){
 

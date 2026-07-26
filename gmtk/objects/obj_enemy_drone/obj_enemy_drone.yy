@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_drone",
-    "path":"sprites/spr_enemy_drone/spr_enemy_drone.yy",
+    "name":"spr_enemy_drone1",
+    "path":"sprites/spr_enemy_drone1/spr_enemy_drone1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

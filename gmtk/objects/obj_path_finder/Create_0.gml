@@ -1,1 +1,1 @@
-global.path_find = mp_grid_create(-16, -16, 516, 516, 32, 32);
+global.path_find = mp_grid_create(0, 0, 516, 516, 16, 16);

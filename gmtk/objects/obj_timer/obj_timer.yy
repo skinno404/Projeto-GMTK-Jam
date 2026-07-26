@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_end",
-    "path":"sprites/spr_end/spr_end.yy",
+    "name":"spr_end1",
+    "path":"sprites/spr_end1/spr_end1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_torret",
-    "path":"sprites/spr_torret/spr_torret.yy",
+    "name":"spr_torret1",
+    "path":"sprites/spr_torret1/spr_torret1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
