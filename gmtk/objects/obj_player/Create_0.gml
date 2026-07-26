@@ -79,6 +79,12 @@ if !instance_exists(o_gui_died){
 
 }
 
+if !instance_exists(o_gui_binds){
+
+	instance_create_depth(x, y, 12, o_gui_binds);
+
+}
+
 if !instance_exists(o_particle_global){
 
 	instance_create_depth(x, y, 12, o_particle_global);

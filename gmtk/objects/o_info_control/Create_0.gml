@@ -11,3 +11,5 @@ global.scores = 0;
 global.actual_combo = 0;
 global.combo_delay = 60*3;
 global.combo_score = 0;
+
+global.show_controls = true;

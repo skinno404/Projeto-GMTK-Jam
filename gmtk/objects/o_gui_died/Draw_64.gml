@@ -1,5 +1,6 @@
 if(global.died){
-		var w = camera_get_view_width(0);
+	draw_set_font(fnt_alien);
+	var w = camera_get_view_width(0);
 	var h = camera_get_view_height(0);
 	draw_set_colour(c_black);
 	draw_set_alpha(alpha_hud);
@@ -28,7 +29,7 @@ if(global.died){
 	var h2 = string_height("Retry");
 	
 	draw_set_alpha(0.5);
-	draw_rectangle(w/2-w2,h/2-h2+127,w/2+w2,h/2+h2+127,false);
+	//draw_rectangle(w/2-w2,h/2-h2+127,w/2+w2,h/2+h2+127,false);
 	draw_set_alpha(1);
 	if(space || enter){
 		can_glow = true;	

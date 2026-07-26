@@ -4,7 +4,7 @@ function scr_enemy_slash(){
 
 	if take_turn == true{
 
-		if abs(obj_player.x - x) < atk_range and abs(obj_player.y - y) < atk_range and free_sight and !in_vision && !global.in_hud{
+		if abs(obj_player.x - x) < atk_range and abs(obj_player.y - y) < atk_range and free_sight and !in_vision && !global.in_hud && !global.died&& !global.show_controls{
 
 			sprite_index = spr_enemy_robot_idle;
 			take_turn = false;

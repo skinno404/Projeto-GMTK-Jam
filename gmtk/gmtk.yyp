@@ -35,6 +35,7 @@
     {"id":{"name":"o_depth_control","path":"objects/o_depth_control/o_depth_control.yy",},},
     {"id":{"name":"o_dummy","path":"objects/o_dummy/o_dummy.yy",},},
     {"id":{"name":"o_enemy_dead","path":"objects/o_enemy_dead/o_enemy_dead.yy",},},
+    {"id":{"name":"o_gui_binds","path":"objects/o_gui_binds/o_gui_binds.yy",},},
     {"id":{"name":"o_gui_control","path":"objects/o_gui_control/o_gui_control.yy",},},
     {"id":{"name":"o_gui_died","path":"objects/o_gui_died/o_gui_died.yy",},},
     {"id":{"name":"o_help_robot","path":"objects/o_help_robot/o_help_robot.yy",},},

@@ -79,7 +79,7 @@ function scr_player_movement(){
 
 	}
 
-	if attack and can_attack and can_use_attack && !global.in_hud{
+	if attack and can_attack and can_use_attack && !global.in_hud && !global.died && !global.show_controls{
 		
 		can_attack = false;
 		var _atk = instance_create_depth(x + lengthdir_x(18, aim_direction), y - 12 + lengthdir_y(12, aim_direction), 0, obj_player_atk);
@@ -90,7 +90,7 @@ function scr_player_movement(){
 
 	}
 
-	if shot and can_shot && ammo_atual > 0 && alarm[2] <= 0 && !global.in_hud{
+	if shot and can_shot && ammo_atual > 0 && alarm[2] <= 0 && !global.in_hud && !global.died && !global.show_controls{
 		
 		var dir = point_direction(x,y,mouse_x,mouse_y);
 		var x_part = x + lengthdir_x(+24,dir);
@@ -121,7 +121,7 @@ function scr_player_movement(){
 		}
 	}
 
-	if keyboard_check(dash_key) and can_dash{
+	if keyboard_check(dash_key) and can_dash && !global.in_hud && !global.died && !global.show_controls{
 
 		estate = scr_player_dash;
 		can_dash = false;

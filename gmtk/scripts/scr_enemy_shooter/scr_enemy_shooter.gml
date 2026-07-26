@@ -1,6 +1,6 @@
 function scr_enemy_shot(){
 
-	if instance_exists(obj_player) && !global.in_hud{
+	if instance_exists(obj_player) && !global.in_hud && !global.died && !global.show_controls{
 
 		aim_direction = point_direction(x, y, obj_player.x, obj_player.y);
 
