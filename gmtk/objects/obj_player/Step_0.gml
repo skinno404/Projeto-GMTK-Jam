@@ -1,5 +1,6 @@
-if global.died{
+if global.in_hud or global.died{
 
+	exit;
 
 }
 

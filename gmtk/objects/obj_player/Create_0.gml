@@ -5,11 +5,11 @@ enum alarms{
 
 }
 
-up_key = ord("W");
-down_key = ord("S");
-left_key = ord("A");
-right_key = ord("D");
-reload_key = ord("R");
+up_key = ord("P");
+down_key = 186;
+left_key = ord("L");
+right_key = 222;
+reload_key = ord("I");
 dash_key = vk_space;
 attack_key = mb_right;
 shot_key = mb_left;
@@ -72,6 +72,7 @@ if !instance_exists(obj_camera){
 if !instance_exists(o_gui_control){
 
 	instance_create_depth(x, y, 12, o_gui_control);
+	o_gui_control.nxt_lvl_snd_fx = false;
 
 }
 

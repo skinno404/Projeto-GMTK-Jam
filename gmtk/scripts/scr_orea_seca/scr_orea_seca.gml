@@ -6,7 +6,7 @@ function scr_orea_seca_atk(){
 
 	}
 
-	if free_sight == false and charge_shot != 0{
+	if free_sight == false and charge_shot > 0{
 
 		charge_shot --;
 		audio_stop_sound(snd_charge_up);
@@ -23,7 +23,7 @@ function scr_orea_seca_atk(){
 			take_turn = false;
 			alarm[1] = 8;
 
-			if charge_shot >= 7{
+			if charge_shot >= 10{
 
 				audio_stop_sound(snd_charge_loss);
 				audio_stop_sound(snd_charge_up);
@@ -40,7 +40,7 @@ function scr_orea_seca_atk(){
 				_shot.image_angle = aim_direction;
 				_shot.direction = aim_direction;
 
-			}else if charge_shot > 0{
+			}else{
 
 				audio_stop_sound(snd_charge_loss);
 				audio_emitter_position(turret_emitter, obj_player.x - x, obj_player.y - y, 0);
@@ -51,7 +51,5 @@ function scr_orea_seca_atk(){
 		}
 
 	}
-
-	charge_shot = clamp(charge_shot, 0, 7);
 
 }

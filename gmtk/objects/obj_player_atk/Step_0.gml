@@ -30,7 +30,8 @@ if instance_place_list(x, y, obj_enemy_shot, shot_parry_list, true){
 		if instance_exists(shot_parry_list[| i]){
 
 			var _dir = point_direction(x, y, mouse_x, mouse_y);
-			
+
+			global.scores += irandom_range(40, 50);
 			var _deflect = instance_create_depth(shot_parry_list[| i].x, shot_parry_list[| i].y, 0, obj_player_shot);
 			_deflect.speed = shot_parry_list[| i].speed /2 + 12;
 			_deflect.start_x = shot_parry_list[| i].x;
@@ -53,7 +54,6 @@ if instance_place_list(x, y, obj_enemy_shot, shot_parry_list, true){
 
 	}
 
-	global.scores += irandom_range(25, 40);
 	obj_player.hp = obj_player.hp_gain + obj_player.hp_gain/2;
 	audio_stop_sound(snd_swing2);
 	audio_stop_sound(snd_swing1);
@@ -76,6 +76,7 @@ if instance_place_list(x, y, obj_enemy, enemy_hit_list, true){
 
 	for (var i = 0; i < ds_list_size(enemy_hit_list); i ++) {
 
+		global.scores += irandom_range(10, 20);
 		source.hp += source.hp_gain;
 		if(instance_exists(enemy_hit_list[| i])){
 			enemy_hit_list[| i].hp -= 5;

@@ -5,5 +5,3 @@ if(obj_player.x > x){
 }else{
 	image_xscale = 1;
 }
-
-script_execute(estate);

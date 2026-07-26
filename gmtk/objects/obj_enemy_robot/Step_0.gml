@@ -40,5 +40,3 @@ if distance_to_object(obj_player_shot) < 80{
 		parry = -1;
 	}
 }
-
-script_execute(estate);

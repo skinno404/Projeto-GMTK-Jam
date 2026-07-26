@@ -21,5 +21,3 @@ if(y+20 > obj_player.y){
 	always_top = false;
 	
 }
-
-script_execute(estate);

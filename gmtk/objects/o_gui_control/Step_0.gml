@@ -17,6 +17,16 @@
 
 if(global.in_hud){
 
+	if nxt_lvl_snd_fx == false{
+
+		global.music_fx.effects[0] = audio_effect_create(AudioEffectType.Reverb1);
+		global.music_fx.effects[0].mix = 0.8;
+		global.music_fx.effects[0].damp = 0.7;
+		global.music_fx.effects[0].size = 0.6;
+		nxt_lvl_snd_fx = true;
+
+	}
+
 	can_show_hud = true;
 	alpha_hud = approach(alpha_hud,1,0.1);
 	hud_scale = lerp(hud_scale,2,0.05);
@@ -26,6 +36,7 @@ if(global.in_hud){
 	}
 		
 }else{
+	nxt_lvl_snd_fx = false;
 	alpha_hud = approach(alpha_hud,0,0.1);
 	hud_scale = approach(hud_scale,0,0.1);
 	hud_sub_scale = lerp(hud_sub_scale,0,0.1);

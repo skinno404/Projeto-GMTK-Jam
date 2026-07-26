@@ -3,21 +3,21 @@ if(hp <= 0){
 	if type == "drone"{
 
 		audio_emitter_position(generic_enemy_emitter, obj_player.x - x, obj_player.y - y, 0);
-		audio_play_sound_on(generic_enemy_emitter, snd_drone_dying, 0, 12, 0.5, 0, random_range(0.9, 1.1));
+		audio_play_sound_on(generic_enemy_emitter, snd_drone_dying, 0, 12, 1, 0, random_range(0.9, 1.1));
 		yy = y + sprite_get_height(spr_enemy_drone);
 
 	}else if type == "robot"{
 
 		audio_emitter_position(generic_enemy_emitter, obj_player.x - x, obj_player.y - y, 0);
-		audio_play_sound_on(generic_enemy_emitter, snd_robot_dying, 0, 12, 0.5, 0, random_range(0.9, 1.1));
+		audio_play_sound_on(generic_enemy_emitter, snd_robot_dying, 0, 12, 0.75, 0, random_range(0.9, 1.1));
 
 	}else if type == "oreaseca"{
 
 		audio_stop_sound(snd_charge_up);
 		audio_stop_sound(snd_charge_loss);
 		audio_emitter_position(generic_enemy_emitter, obj_player.x - x, obj_player.y - y, 0);
-		audio_play_sound_on(generic_enemy_emitter, snd_drone_dying, 0, 12, 0.5, 0, random_range(0.9, 1.1));
-		yy = y + sprite_get_height(spr_enemy_torret_dead);
+		audio_play_sound_on(generic_enemy_emitter, snd_drone_dying, 0, 12, 1, 0, random_range(0.9, 1.1));
+		yy = y - sprite_get_height(spr_enemy_torret_dead);
 
 	}
 	
@@ -44,5 +44,11 @@ if !collision_line(x, y, obj_player.x, obj_player.y - 8, obj_collision, true, tr
 }else{
 
 	free_sight = false;
+
+}
+
+if !global.in_hud or !global.show_controls or !global.died{
+
+	script_execute(estate);
 
 }

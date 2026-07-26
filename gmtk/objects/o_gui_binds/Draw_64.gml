@@ -37,14 +37,14 @@ if(global.show_controls){
 	if(space || enter){
 		can_glow = true;
 		if !audio_is_playing(snd_music){
-			audio_play_sound_on(global.music_emitter, snd_music, -1, 1, 0.5);
+			audio_play_sound_on(global.music_emitter, snd_music, 1, 1, 0.5);
 		}
 	}
 	if(point_in_rectangle(mx,my,w/2-w2,h/2-h2+127+32,w/2+w2,h/2+h2+127+32)){
 		if(mb1){
 			can_glow = true;
 			if !audio_is_playing(snd_music){
-				audio_play_sound_on(global.music_emitter, snd_music, -1, 1, 0.5);
+				audio_play_sound_on(global.music_emitter, snd_music, 1, 1, 0.5);
 			}
 		}
 	}

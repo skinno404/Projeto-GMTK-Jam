@@ -4,6 +4,7 @@ angle = 0;
 target = 0;
 scale = 1;
 
+nxt_lvl_snd_fx = false;
 can_show_hud = false;
 glow_alpha = 0;
 alpha_hud = 0;

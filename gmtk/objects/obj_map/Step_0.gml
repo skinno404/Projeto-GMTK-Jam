@@ -142,6 +142,7 @@ if restart_map{
 	instance_destroy(obj_player_atk);
 	instance_destroy(obj_enemy_atk);
 	instance_destroy(obj_enemy_shot);
+	instance_destroy(o_pecas);
 	global.enemy_count = 0;
 	only_one_player = false;
 

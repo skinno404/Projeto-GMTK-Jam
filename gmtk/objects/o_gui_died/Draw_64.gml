@@ -11,7 +11,7 @@ if(global.died){
 		draw_set_halign(fa_center);
 		draw_text_transformed(w/2,h/2-64,"You Died",2,hud_scale,0);
 		draw_set_halign(fa_left);
-		draw_text_transformed(w/2-string_width("You DiedYou Died"),h/2,"Enemies Killed :",1,hud_sub_scale,0);
+		draw_text_transformed(w/2-string_width("You DiedYou Died"),h/2,"Total Enemies Killed :",1,hud_sub_scale,0);
 		draw_text_transformed(w/2-string_width("You DiedYou Died"),h/2+32,"Max Score :",1,hud_sub_scale,0);
 		draw_text_transformed(w/2-string_width("You DiedYou Died"),h/2+64,"Level :",1,hud_sub_scale,0);
 		draw_set_halign(fa_right);
@@ -56,7 +56,7 @@ if(glow_alpha = 1){
 	global.kills_total_run = 0;
 	global.scores = 0;
 	global.actual_combo = 0;
-	global.level = 1;
+	global.level = 11;
 	global.died = false;
 	global.can_pass = false;
 	can_glow = false;

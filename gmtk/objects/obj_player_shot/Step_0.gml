@@ -3,7 +3,7 @@ if life <= 0{
 	if(!global.in_hud && !global.died && !global.show_controls){
 	audio_stop_sound(snd_pistol_shot);
 	audio_emitter_position(shot_sound_emitter, obj_player.x - x, obj_player.y - y, 0);
-	audio_play_sound_on(shot_sound_emitter, snd_pistol_shot, 0, 12, 0.5, 0, shot_pitch + random_range(-0.05, 0.15));
+	audio_play_sound_on(shot_sound_emitter, snd_pistol_shot, 0, 12, 0.65, 0, shot_pitch + random_range(-0.05, 0.15));
 	}
 
 }
@@ -30,6 +30,7 @@ if instance_place_list(x, y, obj_enemy, _hit_list, true) {
 
 	}
 
+	global.scores += irandom_range(45, 65);
 	instance_destroy();
 
 }

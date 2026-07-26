@@ -9,7 +9,7 @@ if life <= 0{
 	audio_stop_sound(snd_swing2);
 	audio_stop_sound(snd_swing1);
 	audio_emitter_position(sword_sound_emitter, obj_player.x - x, obj_player.y - y, 0);
-	audio_play_sound_on(sword_sound_emitter, choose(snd_swing1, snd_swing2), 0, 12, 0.5, 0, swing_pitch + random_range(-0.05, 0.05));
+	audio_play_sound_on(sword_sound_emitter, choose(snd_swing1, snd_swing2), 0, 12, 1, 0, swing_pitch + random_range(-0.05, 0.05));
 	}
 
 }
@@ -66,7 +66,7 @@ if parry{
 
 }
 
-if hit == false and obj_player.alarm[5] <= 170{
+if hit == false and obj_player.alarm[5] <= 170 and obj_player.invulnerable == false{
 
 	hit = true;
 	obj_player.hp -= source.damage;

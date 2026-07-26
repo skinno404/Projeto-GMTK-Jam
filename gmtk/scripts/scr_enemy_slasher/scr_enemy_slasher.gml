@@ -28,12 +28,26 @@ function scr_enemy_slash(){
 			}
 			path = path_add();
 
-			if mp_grid_path(global.path_find, path, x, y - 4, obj_player.x, obj_player.y - 4, true){
+			if free_sight{
 
-				sprite_index = spr_enemy_robot_run;
-				take_turn = false;
-				alarm[1] = 5;
-				path_start(path, spd, path_action_stop, false);
+				if mp_linear_path(path, obj_player.x, obj_player.y - 12, spd, false){
+
+					take_turn = false;
+					alarm[1] = 5;
+					path_start(path, spd, path_action_stop, false);
+
+				}
+
+			}else{
+
+				if mp_grid_path(global.path_find, path, x, y - 4, obj_player.x, obj_player.y - 4, true){
+
+					sprite_index = spr_enemy_robot_run;
+					take_turn = false;
+					alarm[1] = 5;
+					path_start(path, spd, path_action_stop, false);
+
+				}
 
 			}
 

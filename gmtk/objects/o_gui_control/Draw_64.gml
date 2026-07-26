@@ -7,7 +7,7 @@
 	draw_set_halign(fa_center);
 	draw_sprite_ext(s_bullet_gui,obj_player.ammo_atual,w-offset*2,h-offset*2,scale*2,scale_y*2,angle,c_white,1);
 }*/
-if(global.in_hud || alpha_hud > 0){
+if(global.in_hud || alpha_hud > 0) and global.level < 11{
 
 	draw_set_font(fnt_alien);
 
@@ -60,7 +60,7 @@ if(global.in_hud || alpha_hud > 0){
 	
 	draw_text_transformed(w/2+string_width("Enemies Killed"),h/2+64,global.scores,1,hud_sub_scale,0);
 	
-	draw_text(w/2,h/2-90,global.score_total_run);
+	draw_text(w/2+string_width(global.score_total_run + global.scores),h/2-90,global.score_total_run + global.scores);
 	//draw_text(w/2,h/2-120,global.kills_total_game_time);
 	
 	var mx = device_mouse_x_to_gui(0);
@@ -105,17 +105,18 @@ draw_set_alpha(glow_alpha)
 draw_rectangle(0,0,w,h,false);
 
 }
+
 var w = camera_get_view_width(0);
 var h = camera_get_view_height(0);
 if(global.actual_combo > 0){
 draw_text_transformed(w/2+700,h/2-450,string(global.actual_combo) + "X",2,2,-12);
-if(!global.in_hud){
+if(!global.in_hud) and !global.show_controls and !global.died{
 draw_sprite_ext(spr_combo_bar, 0, w/2+640, h/2 - 426, 5 * alarm[0]/global.combo_delay, 3, -12, c_white, 1);
 }
 draw_set_halign(fa_center);
 draw_text_transformed(w/2+660,h/2-420,string(global.combo_score),2,2,-12);
 if(alarm[0] < 0){
-	alarm[0] = global.combo_delay - (global.actual_combo);	
+	alarm[0] = global.combo_delay - (global.actual_combo * 3);	
 }
 }
 

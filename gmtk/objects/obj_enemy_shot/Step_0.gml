@@ -3,7 +3,7 @@ if life <= 0{
 	if(!global.in_hud){
 	audio_stop_sound(snd_enemy_shot);
 	audio_emitter_position(shot_sound_emitter, obj_player.x - x, obj_player.y - y, 0);
-	audio_play_sound_on(shot_sound_emitter, snd_enemy_shot, 0, 12, 0.7, 0, shot_pitch + random_range(-0.05, 0.15));
+	audio_play_sound_on(shot_sound_emitter, snd_enemy_shot, 0, 12, 0.6, 0, shot_pitch + random_range(-0.05, 0.15));
 	}
 
 }
@@ -16,7 +16,7 @@ if life >= lifetime and can_destroy{
 
 if place_meeting(x, y, obj_player){
 
-	if hit == false and obj_player.alarm[5] <= 170{
+	if hit == false and obj_player.alarm[5] <= 170 and obj_player.invulnerable == false{
 
 		hit = true;
 		obj_player.hit = true;
