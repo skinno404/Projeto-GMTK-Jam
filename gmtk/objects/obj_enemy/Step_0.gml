@@ -21,12 +21,13 @@ if(hp <= 0){
 	
 	o_gui_control.alarm[0] = global.combo_delay;
 	global.actual_combo +=1;
-	global.scores += irandom_range(20,40);
-	var dead = instance_create_layer(x,yy,"Instances",o_enemy_dead);
+	var dead = instance_create_layer(x,y,"Instances",o_enemy_dead);
 	dead.sprite_index = dead_spr;
 	randomise();
 	dead.image_index = irandom_range(0,2);
 	dead.image_speed = 0;
+	global.combo_score += score_;
+	global.scores += score_;
 	global.killeds ++;
 	global.kills_total_run+=1;
 	global.kills_total_game_time+=1;

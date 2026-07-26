@@ -45,7 +45,7 @@ if(global.in_hud || alpha_hud > 0){
 	if(killed_temp >= enemy_temp){
 		draw_set_font(fnt_clear);
 		draw_set_colour(c_yellow);
-		draw_text_transformed(w/2+50,h/2-100,"CLEAR",2,hud_scale,-20);
+		draw_text_transformed(w/2+50,h/2-100,"CLEAR",clear_scale,clear_scale,-20);
 		draw_set_font(fnt_alien);
 	}
 	
@@ -61,24 +61,31 @@ if(global.in_hud || alpha_hud > 0){
 	
 	draw_text_transformed(w/2+string_width("Enemies Killed"),h/2+64,global.scores,1,hud_sub_scale,0);
 	
-	//draw_text(w/2,h/2-90,global.kills_total_run);
+	draw_text(w/2,h/2-90,global.score_total_run);
 	//draw_text(w/2,h/2-120,global.kills_total_game_time);
 	
 	var mx = device_mouse_x_to_gui(0);
 	var my = device_mouse_y_to_gui(0);
 	var mb1 = mouse_check_button_pressed(mb_left);
-	draw_set_halign(fa_center);
-	var w2 = string_width("Next");
-	var h2 = string_height("Next");
-	draw_set_alpha(1);
 	
-	if(point_in_rectangle(mx,my,w/2-w2,h/2-h2+106,w/2+w2,h/2+h2+106)){
+	var space = keyboard_check_pressed(vk_space);
+	var enter = keyboard_check_pressed(vk_enter);
+	draw_set_halign(fa_center);
+	var w2 = string_width("Go To Next Level");
+	var h2 = string_height("Go To Next Level");
+	draw_set_alpha(0.5);
+	//draw_rectangle(w/2-w2,h/2-h2+127,w/2+w2,h/2+h2+127,false);
+	draw_set_alpha(1);
+	if(space || enter){
+		can_glow = true;	
+	}
+	if(point_in_rectangle(mx,my,w/2-w2,h/2-h2+127,w/2+w2,h/2+h2+127)){
 		if(mb1){
 			can_glow = true;
 		}
 	}
 	draw_set_colour(c_white);
-	draw_text_transformed(w/2,h/2+96,"Next",2,hud_sub_scale*2,0);
+	draw_text_transformed(w/2,h/2+108,"Go To Next Level",2,hud_sub_scale*2,0);
 	
 if(can_glow){
 	glow_alpha = approach(glow_alpha,1,0.1);
@@ -88,7 +95,10 @@ if(glow_alpha = 1){
 	global.can_pass = true;
 	global.killeds = 0;
 	global.enemy_count = 0;
+	global.score_total_run = global.score_total_run + global.scores;
 	global.scores = 0;
+	global.actual_combo = 0;
+	clear_scale = 200;
 }
 
 draw_set_colour(c_white);
@@ -100,9 +110,11 @@ var w = camera_get_view_width(0);
 var h = camera_get_view_height(0);
 if(global.actual_combo > 0){
 draw_text_transformed(w/2+700,h/2-450,string(global.actual_combo) + "X",2,2,-12);
+if(!global.in_hud){
 draw_sprite_ext(spr_combo_bar, 0, w/2+640, h/2 - 426, 5 * alarm[0]/global.combo_delay, 3, -12, c_white, 1);
+}
 draw_set_halign(fa_center);
-draw_text_transformed(w/2+660,h/2-420,string(global.scores),2,2,-12);
+draw_text_transformed(w/2+660,h/2-420,string(global.combo_score),2,2,-12);
 if(alarm[0] < 0){
 	alarm[0] = global.combo_delay - (global.actual_combo);	
 }

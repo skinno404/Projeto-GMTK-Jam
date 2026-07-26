@@ -10,3 +10,6 @@ enemy_hit_list = ds_list_create();
 
 always_top = true;
 hit_check_dummy = false;
+
+yscale_target = 1;
+yscale = 0;

@@ -11,3 +11,6 @@ shot_parry_list = ds_list_create();
 enemy_hit_list = ds_list_create();
 
 always_top = true;
+
+yscale_target = 1;
+yscale = 0;

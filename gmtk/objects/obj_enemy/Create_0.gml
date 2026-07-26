@@ -8,3 +8,5 @@ free_sight = false;
 
 generic_enemy_emitter = audio_emitter_create();
 aim_direction = 0;
+
+score_ = irandom_range(20,40);

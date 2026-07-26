@@ -10,4 +10,5 @@ alpha_hud = 0;
 
 hud_scale = 0;
 hud_sub_scale = 0;
+clear_scale = 200;
 can_glow = false;

@@ -1,3 +1,5 @@
+yscale = approach(yscale,yscale_target,0.2);
+
 x = obj_player.x + lengthdir_x(18, image_angle);
 y = obj_player.y - 12 + lengthdir_y(12, image_angle);
 

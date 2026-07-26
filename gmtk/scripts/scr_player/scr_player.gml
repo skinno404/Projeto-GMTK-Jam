@@ -186,7 +186,7 @@ function scr_player_dash(){
 	}else{
 
 		dash_duration = 0;
-		alarm[4] = 24;
+		alarm[4] = 60*1.5;
 		image_speed = 1;
 		ivulnerable = false;
 		estate = scr_player_movement;

@@ -11,7 +11,6 @@ asset_add_tags(o_help_robot, TAG_DEPTHSORT, asset_object);
 asset_add_tags(obj_orea_seca, TAG_DEPTHSORT, asset_object);
 asset_add_tags(o_enemy_dead, TAG_DEPTHSORT, asset_object);
 asset_add_tags(o_pecas, TAG_DEPTHSORT, asset_object);
-asset_add_tags(obj_collision, TAG_DEPTHSORT, asset_object);
 
 depth_grid = ds_grid_create(2, 0);
 depth_array = tag_get_asset_ids(TAG_DEPTHSORT,asset_object);

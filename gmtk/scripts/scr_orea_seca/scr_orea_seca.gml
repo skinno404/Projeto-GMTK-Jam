@@ -20,15 +20,15 @@ function scr_orea_seca_atk(){
 			take_turn = false;
 			alarm[1] = 8;
 
-			if charge_shot >= 10{
+			if charge_shot >= 7{
 
 				var dir = point_direction(x,y,obj_player.x,obj_player.y);
-				var x_part = x + lengthdir_x(19,dir);
-				var y_part = y + lengthdir_y(sprite_get_width(s_gun_shooter),dir);
+				var x_part = x + lengthdir_x(17,dir);
+				var y_part = y-12 + lengthdir_y(sprite_get_width(s_gun_torret),dir);
 				scr_particle_damage(x_part,y_part,aim_direction,c_red,c_gray);
 				scr_particle_damage(x_part,y_part,aim_direction,c_red,c_gray);
 
-				var _shot = instance_create_depth(x + lengthdir_x(24, aim_direction), y + lengthdir_y(24, aim_direction), 0, obj_enemy_shot);
+				var _shot = instance_create_depth(x + lengthdir_x(24, aim_direction), y-12 + lengthdir_y(24, aim_direction), 0, obj_enemy_shot);
 				_shot.start_x = x;
 				_shot.start_y = y;
 				_shot.source = self;
@@ -41,6 +41,6 @@ function scr_orea_seca_atk(){
 
 	}
 
-	charge_shot = clamp(charge_shot, 0, 12);
+	charge_shot = clamp(charge_shot, 0, 7);
 
 }
