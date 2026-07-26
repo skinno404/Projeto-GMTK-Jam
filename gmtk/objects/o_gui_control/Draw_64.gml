@@ -7,7 +7,6 @@
 	draw_set_halign(fa_center);
 	draw_sprite_ext(s_bullet_gui,obj_player.ammo_atual,w-offset*2,h-offset*2,scale*2,scale_y*2,angle,c_white,1);
 }*/
-
 if(global.in_hud || alpha_hud > 0){
 
 	draw_set_font(fnt_alien);
@@ -20,7 +19,7 @@ if(global.in_hud || alpha_hud > 0){
 	draw_set_colour(c_white);
 		draw_set_halign(fa_center);
 		draw_text_transformed(w/2,h/2-64,"Level Complete",2,hud_scale,0);
-		
+	
 	draw_set_halign(fa_left);
 	
 	draw_text_transformed(w/2-string_width("Enemies Killed"),h/2,"Enemies Killed :",1,hud_sub_scale,0);

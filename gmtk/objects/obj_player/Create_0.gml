@@ -73,6 +73,12 @@ if !instance_exists(o_gui_control){
 
 }
 
+if !instance_exists(o_gui_died){
+
+	instance_create_depth(x, y, 12, o_gui_died);
+
+}
+
 if !instance_exists(o_particle_global){
 
 	instance_create_depth(x, y, 12, o_particle_global);
@@ -105,3 +111,4 @@ t_delay = 5;
 window_set_fullscreen(true);
 
 can_use_attack = true;
+global.died = false;

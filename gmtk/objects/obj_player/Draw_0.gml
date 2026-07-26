@@ -33,6 +33,9 @@ if(aim_xscale != image_xscale){
 	}
 }
 
+if(estate = scr_player_dash){
+	aplicar_rastro_dash(c_blue, 0.1,spr_player_idle); 
+}
 draw_sprite_ext(sprite_index,image_index,x,y,aim_xscale,image_yscale,0,c_white,1);
 if(left && !right || up && !down || !left && right || !up && down){
 	draw_sprite_ext(s_player_run_legs,image_index,x,y,image_xscale,image_yscale,0,c_white,1);
