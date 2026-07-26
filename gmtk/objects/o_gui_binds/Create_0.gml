@@ -4,6 +4,10 @@ angle = 0;
 target = 0;
 scale = 1;
 
+global.music_emitter = audio_emitter_create();
+global.music_fx = audio_bus_create();
+audio_emitter_bus(global.music_emitter, global.music_fx);
+
 can_show_hud = false;
 glow_alpha = 0;
 alpha_hud = 0;

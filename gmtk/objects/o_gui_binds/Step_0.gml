@@ -6,7 +6,6 @@ if(global.show_controls){
 	if(hud_scale > 1.8){
 	hud_sub_scale = lerp(hud_sub_scale,1,0.05);
 	}
-		
 }else{
 	alpha_hud = approach(alpha_hud,0,0.1);
 	hud_scale = approach(hud_scale,0,0.1);

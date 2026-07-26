@@ -85,7 +85,7 @@ if(global.in_hud || alpha_hud > 0){
 	}
 	draw_set_colour(c_white);
 	draw_text_transformed(w/2,h/2+108,"Go To Next Level",2,hud_sub_scale*2,0);
-	
+	draw_text_transformed(w/2,w/2-44,"Made by skinno && alm",1,1,0);
 if(can_glow){
 	glow_alpha = approach(glow_alpha,1,0.1);
 }

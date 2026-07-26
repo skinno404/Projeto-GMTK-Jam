@@ -1,4 +1,5 @@
 if(global.died){
+
 	draw_set_font(fnt_alien);
 	var w = camera_get_view_width(0);
 	var h = camera_get_view_height(0);
@@ -32,7 +33,7 @@ if(global.died){
 	//draw_rectangle(w/2-w2,h/2-h2+127,w/2+w2,h/2+h2+127,false);
 	draw_set_alpha(1);
 	if(space || enter){
-		can_glow = true;	
+		can_glow = true;
 	}
 	if(point_in_rectangle(mx,my,w/2-w2,h/2-h2+127,w/2+w2,h/2+h2+127)){
 		if(mb1){
@@ -41,7 +42,8 @@ if(global.died){
 	}
 	draw_set_colour(c_white);
 	draw_text_transformed(w/2,h/2+108,"Retry",2,hud_sub_scale*2,0);
-	
+	draw_text_transformed(w/2,w/2-64,hint,1,1,0);
+	draw_text_transformed(w/2,w/2-44,"Made by skinno && alm",1,1,0);
 if(can_glow){
 	glow_alpha = approach(glow_alpha,1,0.1);
 }
@@ -55,7 +57,12 @@ if(glow_alpha = 1){
 	global.scores = 0;
 	global.actual_combo = 0;
 	global.level = 1;
-	game_restart();
+	global.died = false;
+	global.can_pass = false;
+	can_glow = false;
+	glow_alpha = 0;
+	obj_map.restart_map = true;
+
 }
 
 draw_set_colour(c_white);

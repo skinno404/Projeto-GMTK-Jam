@@ -4,6 +4,7 @@ angle = 0;
 target = 0;
 scale = 1;
 
+hint = -1;
 can_show_hud = false;
 glow_alpha = 0;
 alpha_hud = 0;

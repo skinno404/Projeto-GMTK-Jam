@@ -1,5 +1,6 @@
 if global.died{
 
+
 }
 
 up = keyboard_check(up_key) or keyboard_check(vk_up);

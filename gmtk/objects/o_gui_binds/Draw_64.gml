@@ -35,16 +35,22 @@ if(global.show_controls){
 	//draw_rectangle(w/2-w2,h/2-h2+127,w/2+w2,h/2+h2+127,false);
 	draw_set_alpha(1);
 	if(space || enter){
-		can_glow = true;	
+		can_glow = true;
+		if !audio_is_playing(snd_music){
+			audio_play_sound_on(global.music_emitter, snd_music, -1, 1, 0.5);
+		}
 	}
 	if(point_in_rectangle(mx,my,w/2-w2,h/2-h2+127+32,w/2+w2,h/2+h2+127+32)){
 		if(mb1){
 			can_glow = true;
+			if !audio_is_playing(snd_music){
+				audio_play_sound_on(global.music_emitter, snd_music, -1, 1, 0.5);
+			}
 		}
 	}
 	draw_set_colour(c_white);
 	draw_text_transformed(w/2,h/2+108+32,"Start",2,hud_sub_scale*2,0);
-	
+	draw_text_transformed(w/2,w/2-44,"Made by skinno && alm",1,1,0);
 if(can_glow){
 	glow_alpha = approach(glow_alpha,1,0.1);
 }
