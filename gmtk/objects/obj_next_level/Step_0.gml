@@ -12,3 +12,9 @@ if(global.can_pass){
 		alarm[0] = 60;
 	}
 }
+
+var bixo = instance_place(x,y,obj_enemy)
+if(bixo != noone){
+	global.enemy_count-=1;
+	instance_destroy(bixo);	
+}

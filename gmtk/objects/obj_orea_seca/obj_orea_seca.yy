@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"o_teste",
+  "%Name":"obj_orea_seca",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_teste",
+  "name":"obj_orea_seca",
   "overriddenProperties":[],
   "parent":{
     "name":"objects",
@@ -38,9 +38,6 @@
     "name":"spr_torret",
     "path":"sprites/spr_torret/spr_torret.yy",
   },
-  "spriteMaskId":{
-    "name":"s_collision_enemyes",
-    "path":"sprites/s_collision_enemyes/s_collision_enemyes.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

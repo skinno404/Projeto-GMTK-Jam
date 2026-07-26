@@ -1,0 +1,1 @@
+global.actual_combo = 0;

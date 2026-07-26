@@ -97,7 +97,7 @@ if generate == true{
 
 					global.enemy_count ++;
 					_steps_taken = 0;
-					var _enemy = instance_create_layer(_xx * cell_size + irandom(16), _yy * cell_size + irandom(16), "Instances", choose(obj_enemy_robot, obj_enemy_drone));
+					var _enemy = instance_create_layer(_xx * cell_size + irandom(16), _yy * cell_size + irandom(16), "Instances", choose(obj_enemy_robot, obj_enemy_drone,obj_orea_seca));
 
 				}
 
