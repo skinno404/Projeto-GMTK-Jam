@@ -8,8 +8,6 @@ shot = mouse_check_button(shot_key);
 
 if tutorial_start == true{
 
-	hp -= 0.03;
-
 	if hp <= 2{
 
 		hp = 2;
@@ -17,6 +15,8 @@ if tutorial_start == true{
 	}
 
 }
+
+hp -= 0.03;
 
 hp = clamp(hp, 0, max_hp);
 

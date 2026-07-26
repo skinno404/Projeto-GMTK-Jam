@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_torret",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":29,
   "bbox_left":1,
   "bbox_right":27,

@@ -49,14 +49,11 @@ if instance_place_list(x, y, obj_enemy_shot, shot_parry_list, true){
 		instance_destroy(shot_parry_list[| j]);
 
 	}
-
+	obj_player.hp = obj_player.max_hp;
 	audio_stop_sound(snd_swing2);
 	audio_stop_sound(snd_swing1);
 	audio_emitter_position(sword_sound_emitter, x - obj_player.x * 0.8, y - obj_player.y * 0.8, 0);
 	audio_play_sound_on(sword_sound_emitter, snd_parry, 0, 12, 0.5, 0, swing_pitch + random_range(-0.05, 0.05));
-
-	obj_camera.zoom_extra = 0.12;
-	obj_camera.zoom_extra_offset = 0.075;
 
 }else{
 	image_index = 0;	
@@ -75,8 +72,6 @@ if instance_place_list(x, y, obj_enemy, enemy_hit_list, true){
 	for (var i = 0; i < ds_list_size(enemy_hit_list); i ++) {
 
 		source.hp += source.hp_gain;
-		obj_camera.zoom_extra = 0.085;
-		obj_camera.zoom_extra_offset = 0.05;
 		if(instance_exists(enemy_hit_list[| i])){
 			enemy_hit_list[| i].hp -= 5;
 		}

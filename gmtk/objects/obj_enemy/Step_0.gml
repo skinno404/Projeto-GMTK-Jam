@@ -3,6 +3,7 @@ if(hp <= 0){
 	if(type = spr_enemy_drone_dead){
 		yy = y + sprite_get_width(spr_enemy_drone);
 	}
+	global.killeds +=1;
 	var dead = instance_create_layer(x,yy,layer,o_enemy_dead);
 	dead.sprite_index = type;
 	randomise();

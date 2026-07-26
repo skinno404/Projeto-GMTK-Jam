@@ -40,8 +40,8 @@
     "path":"sprites/spr_enemy_drone/spr_enemy_drone.yy",
   },
   "spriteMaskId":{
-    "name":"spr_enemy_drone",
-    "path":"sprites/spr_enemy_drone/spr_enemy_drone.yy",
+    "name":"s_collision_drone",
+    "path":"sprites/s_collision_drone/s_collision_drone.yy",
   },
   "visible":true,
 }

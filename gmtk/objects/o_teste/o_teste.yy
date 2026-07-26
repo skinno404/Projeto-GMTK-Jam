@@ -39,8 +39,8 @@
     "path":"sprites/spr_torret/spr_torret.yy",
   },
   "spriteMaskId":{
-    "name":"spr_torret",
-    "path":"sprites/spr_torret/spr_torret.yy",
+    "name":"s_collision_enemyes",
+    "path":"sprites/s_collision_enemyes/s_collision_enemyes.yy",
   },
   "visible":true,
 }

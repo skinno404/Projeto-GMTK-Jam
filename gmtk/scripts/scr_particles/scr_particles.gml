@@ -65,6 +65,53 @@ array_push(global.particles,{sys : sys_dust , type : type_dust});
 
 //////////////////////////////////////////////////////////////////
 
+
+function scr_particle_dust2(x,y,color1,color2){
+	
+var sys_dust2 = part_system_create();
+part_system_depth(sys_dust2,depth);
+
+var type_dust2 = part_type_create();
+part_type_shape(type_dust2					,pt_shape_disk);
+part_type_size(type_dust2					,0.08,0.16,-0.005,0);
+part_type_color2(type_dust2				,color1,color2);
+part_type_alpha2(type_dust2				,1,0);
+part_type_speed(type_dust2					,0.8,2,-0.02,0);
+part_type_direction(type_dust2				,30,150,0,0);
+part_type_life(type_dust2					,200,300);
+part_type_gravity(type_dust2					,0.1,90);
+
+
+part_particles_create(sys_dust2,x,y,type_dust2,2);
+
+array_push(global.particles,{sys : sys_dust2 , type : type_dust2});
+}
+
+//////////////////////////////////////////////////////////////////
+
+function scr_particle_dust3(x,y,color1,color2){
+	
+var sys_dust3 = part_system_create();
+part_system_depth(sys_dust3,depth);
+
+var type_dust3 = part_type_create();
+part_type_shape(type_dust3					,s_pecas);
+part_type_size(type_dust3					,0.8,1,0,0);
+part_type_color2(type_dust3				,color1,color2);
+part_type_alpha2(type_dust3				,1,0);
+part_type_speed(type_dust3					,0.8,2.3,0,0);
+part_type_direction(type_dust3				,0,360,0,0);
+part_type_life(type_dust3					,200,300);
+part_type_gravity(type_dust3					,0.7,90);
+
+
+part_particles_create(sys_dust3,x,y,type_dust3,2);
+
+array_push(global.particles,{sys : sys_dust3 , type : type_dust3});
+}
+
+//////////////////////////////////////////////////////////////////
+
 function scr_particle_magic(x,y,dir,color1,color2){
 	
 var sys_magic = part_system_create();

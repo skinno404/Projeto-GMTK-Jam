@@ -79,7 +79,7 @@ function scr_player_movement(){
 
 	}
 
-	if attack and can_attack and can_use_attack{
+	if attack and can_attack and can_use_attack && !global.in_hud{
 		
 		can_attack = false;
 		var _atk = instance_create_depth(x + lengthdir_x(18, aim_direction), y - 12 + lengthdir_y(12, aim_direction), 0, obj_player_atk);
@@ -90,7 +90,7 @@ function scr_player_movement(){
 
 	}
 
-	if shot and can_shot && ammo_atual > 0 && alarm[2] <= 0{
+	if shot and can_shot && ammo_atual > 0 && alarm[2] <= 0 && !global.in_hud{
 		
 		var dir = point_direction(x,y,mouse_x,mouse_y);
 		var x_part = x + lengthdir_x(+24,dir);
@@ -121,6 +121,18 @@ function scr_player_movement(){
 		}
 	}
 
+	if keyboard_check(dash_key) and can_dash{
+
+		estate = scr_player_dash;
+		can_dash = false;
+		image_speed = 2;
+		ivulnerable = true;
+		move_spd = dash_spd;
+		dash_dir = aim_direction;
+
+	}
+
+
 	hspd = lengthdir_x(move_spd, move_dir);
 	vspd = lengthdir_y(move_spd, move_dir);
 
@@ -130,8 +142,57 @@ function scr_player_movement(){
 	y += vspd;
 
 }
+
 function scr_player_idle(){
 
 	sprite_index = spr_player_idle;
 	
+}
+
+function scr_player_dash(){
+
+	static dash_duration = 0;
+
+	var _hit_list = ds_list_create();
+
+	if instance_place_list(x, y, obj_enemy, _hit_list, true) {
+	
+		var dummy = instance_place(x,y,o_dummy);
+		if(dummy != noone){
+			dummy.hits += 1;	
+		}
+
+		for (var i = 0; i < ds_list_size(_hit_list); i ++) {
+
+			hp += hp_gain;
+			obj_camera.zoom_extra = 0.05;
+			obj_camera.zoom_extra_offset = 0.075;
+			_hit_list[| i].hp -= 1;
+
+		}
+
+	}
+
+	if dash_duration <= dash_range{
+
+		hspd = lengthdir_x(dash_spd, dash_dir);
+		vspd = lengthdir_y(dash_spd, dash_dir);
+
+		scr_player_collision();
+
+		x += hspd;
+		y += vspd;
+
+	}else{
+
+		dash_duration = 0;
+		alarm[4] = 24;
+		image_speed = 1;
+		ivulnerable = false;
+		estate = scr_player_movement;
+
+	}
+
+	dash_duration ++;
+
 }

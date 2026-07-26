@@ -2,11 +2,13 @@ x = source.x + lengthdir_x(18, image_angle);
 y = source.y - 12 + lengthdir_y(12, image_angle);
 
 if life <= 0{
-
+	
+	if(!global.in_hud){
 	audio_stop_sound(snd_swing2);
 	audio_stop_sound(snd_swing1);
 	audio_emitter_position(sword_sound_emitter, obj_player.x - x, obj_player.y - y, 0);
 	audio_play_sound_on(sword_sound_emitter, choose(snd_swing1, snd_swing2), 0, 12, 0.5, 0, swing_pitch + random_range(-0.05, 0.05));
+	}
 
 }
 

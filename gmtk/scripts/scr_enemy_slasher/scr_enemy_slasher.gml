@@ -1,8 +1,10 @@
 function scr_enemy_slash(){
+	
+	var in_vision = collision_line(x,y,obj_player.x,obj_player.y,obj_collision,false,true);
 
 	if take_turn == true{
 
-		if abs(obj_player.x - x) < atk_range and abs(obj_player.y - y) < atk_range and free_sight{
+		if abs(obj_player.x - x) < atk_range and abs(obj_player.y - y) < atk_range and free_sight and !in_vision && !global.in_hud{
 
 			sprite_index = spr_enemy_robot_idle;
 			take_turn = false;

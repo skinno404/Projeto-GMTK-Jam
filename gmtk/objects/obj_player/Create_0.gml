@@ -10,6 +10,7 @@ down_key = ord("S");
 left_key = ord("A");
 right_key = ord("D");
 reload_key = ord("R");
+dash_key = vk_space;
 attack_key = mb_right;
 shot_key = mb_left;
 
@@ -21,6 +22,7 @@ right = 0;
 hspd = 0;
 vspd = 0;
 
+
 spd = 5.5;
 move_dir = 0;
 move_spd = 0;
@@ -31,8 +33,14 @@ atk_cooldown = 20;
 
 shot = 0;
 can_shot = true;
-shot_cooldown = 10;
-shot_range = 280;
+shot_cooldown = 6;
+shot_range = 350;
+
+dash = 0;
+can_dash = true;
+dash_spd = 24;
+dash_dir = 0;
+dash_range = 5;
 
 aim_direction = 0;
 aim_start_x = 0;
@@ -41,9 +49,10 @@ aim_distance = 28;
 
 hp = 10;
 max_hp = 10;
-hp_gain = 3.4;
+hp_gain = 2.8;
+invulnerable = false;
 
-ammo_max = 5;
+ammo_max = 8;
 ammo_atual = ammo_max;
 ammo_delay = 30;
 
@@ -69,6 +78,18 @@ if !instance_exists(o_particle_global){
 
 }
 
+if !instance_exists(obj_timer){
+
+	instance_create_depth(x, y, 12, obj_timer);
+
+}
+
+if !instance_exists(o_info_control){
+
+	instance_create_depth(x, y, 12, o_info_control);
+
+}
+
 estate = scr_player_movement;
 global.atual_weapon = s_gun;
 atual_sprite = 0;
@@ -82,4 +103,4 @@ t_delay = 5;
 
 window_set_fullscreen(true);
 
-can_use_attack = false;
+can_use_attack = true;

@@ -9,7 +9,12 @@ only_one_player = false;
 exit_done = false;
 generate_player = true;
 
+enemy_pool = [];
+enemy_count = 0;
+
 map = ds_grid_create(cell_h, cell_v);
 ds_grid_clear(map, EMPTY);
 
+restart_map = false;
 generate = true;
+global.enemy_count = 0;

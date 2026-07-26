@@ -2,7 +2,7 @@ event_inherited();
 
 path = path_add();
 
-spd = 5;
+spd = 3;
 free_sight = false;
 aggro_range = 260;
 atk_range = 50;
@@ -16,4 +16,4 @@ parry = -1;
 t_part = false;
 t_delay = 6;
 
-type = 2;
+type = spr_enemy_drone_dead;

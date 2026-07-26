@@ -1,4 +1,3 @@
-
 var mx = mouse_x;
 var my = mouse_y;
 var dir = point_direction(x,y,mx,my);
@@ -22,7 +21,6 @@ if(dir > 90 && dir < 260){
 	aim_xscale = 1;
 }
 
-
 if(aim_xscale != image_xscale){
 	if(left && !right || up && !down || !left && right || !up && down){
 	offset_x = 4.5;
@@ -40,8 +38,6 @@ if(left && !right || up && !down || !left && right || !up && down){
 	draw_sprite_ext(s_player_run_legs,image_index,x,y,image_xscale,image_yscale,0,c_white,1);
 }
 draw_sprite_ext(atual_sprite,image_index,x_gun+sign(xs)*offset_x,y-sprite_get_height(spr_player)/2-offset_y,1,xs,dir,c_white,1);
-
-draw_text(x, y - 64, (hp));
 
 	var x_ = x-sprite_get_width(spr_player)/2.5;
 	var y_ = y+20;

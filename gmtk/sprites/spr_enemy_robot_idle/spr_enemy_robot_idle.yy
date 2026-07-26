@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_enemy_robot_idle",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":29,
   "bbox_left":2,
   "bbox_right":27,

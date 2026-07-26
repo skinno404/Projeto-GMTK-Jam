@@ -15,7 +15,7 @@ if generate == true{
 	var steps = 100;
 	var _steps_taken = 0;
 
-	repeat(100){
+	repeat(250){
 
 		_dir = 0;
 
@@ -23,25 +23,17 @@ if generate == true{
 
 			_steps_taken ++;
 
-			if random(100) <= 85 or _steps_taken >= 1 and xx < cell_h{
+			if random(100) <= 65 or _steps_taken >= 1 and xx < cell_h and i > 2{
 
 				_steps_taken = 0;
-				_last_dir = _dir;
 				_dir = choose(0, 3, 1);
 
 			}
 
-			if xx < cell_h - 2{
+			if xx < cell_h - 2 and xx > 1{
 
 				xx += lengthdir_x(1, _dir * 90);
 				yy += lengthdir_y(1, _dir * 90);
-
-			}
-
-			if xx >= cell_h - 6 and exit_done == false{
-
-				instance_create_layer(xx - 32, yy, "Instances", obj_next_level);
-				exit_done = true;
 
 			}
 
@@ -79,15 +71,33 @@ if generate == true{
 
 	}
 
+	_steps_taken = 0;
+
 	for (var _xx = 0; _xx < cell_h; _xx ++) {
 
 		for (var _yy = 0; _yy < cell_v; _yy ++) {
 
 			if map[# _xx, _yy] == FILL{
 
-				if random(100) <= 35{
+				if _xx == cell_h - 2{
 
-					var _enemy = instance_create_layer(_xx * cell_size + irandom(16), _yy * cell_size + irandom(16), "Instances", choose(obj_enemy_robot, obj_enemy_drone, o_teste));
+					instance_create_layer(_xx * cell_size, _yy * cell_size, "Instances", obj_next_level);
+					exit_done = true;
+
+				}
+
+				_steps_taken ++;
+
+				if random(100) <= 35 and _xx >= 8 and _steps_taken >= 4{
+				
+					var _enemy = instance_create_layer(_xx * cell_size + irandom(16), _yy * cell_size + irandom(16), "Instances", obj_enemy_drone);
+					global.enemy_count ++;
+
+				}else if _xx >= 8 and _steps_taken >= irandom_range(7, 12){
+
+					global.enemy_count ++;
+					_steps_taken = 0;
+					var _enemy = instance_create_layer(_xx * cell_size + irandom(16), _yy * cell_size + irandom(16), "Instances", choose(obj_enemy_robot, obj_enemy_drone));
 
 				}
 
@@ -101,14 +111,27 @@ if generate == true{
 
 }
 
-if keyboard_check_pressed(vk_space){
+if keyboard_check_pressed(ord("M")){
 
+	restart_map = true;
+
+}
+
+if restart_map{
+
+	restart_map = false;
 	generate = true;
 	ds_grid_clear(map, 0);
 	instance_destroy(obj_collision);
 	instance_destroy(obj_player);
 	instance_destroy(o_gui_control);
 	instance_destroy(obj_camera);
+	instance_destroy(obj_enemy);
+	instance_destroy(obj_timer);
+	instance_destroy(o_enemy_dead);
+	instance_destroy(obj_next_level);
+	instance_destroy(obj_player_shot);
+	instance_destroy(obj_player_atk);
 	only_one_player = false;
 
 }
