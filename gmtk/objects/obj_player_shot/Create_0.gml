@@ -5,6 +5,7 @@ start_y = 0;
 source = 0;
 shot_sound = snd_enemy_shot;
 shot_pitch = 1;
+parry = false;
 speed = 16;
 image_angle = direction;
 

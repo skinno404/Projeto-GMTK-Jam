@@ -30,7 +30,7 @@ if generate == true{
 
 			}
 
-			if xx < cell_h - 2 and xx > 1{
+			if xx < cell_h - 8 and xx > 1{
 
 				xx += lengthdir_x(1, _dir * 90);
 				yy += lengthdir_y(1, _dir * 90);
@@ -79,7 +79,7 @@ if generate == true{
 
 			if map[# _xx, _yy] == FILL{
 
-				if _xx == cell_h - 2{
+				if _xx == cell_h - 8{
 
 					instance_create_layer(_xx * cell_size, _yy * cell_size, "Instances", obj_next_level);
 					exit_done = true;
@@ -90,16 +90,16 @@ if generate == true{
 
 				if random(100) <= 10 + ((global.level - 1) * 5) and _xx > 8 and _steps_taken >= 4{
 
-					if _xx < cell_h - 3{
+					if _xx < cell_h - 12{
 
 						var _enemy = instance_create_layer(_xx * cell_size + irandom(16), _yy * cell_size + irandom(16), "Instances", obj_enemy_drone);
 						global.enemy_count ++;
 
 					}
 
-				}else if _xx > 6 and _steps_taken >= irandom_range(7, 12) - ((global.level - 1) * 3){
+				}else if _xx > 6 and _steps_taken >= irandom_range(7, 12) - ((global.level - 1) * 2){
 
-					if _xx < cell_h - 3{
+					if _xx < cell_h - 12{
 
 						global.enemy_count ++;
 						_steps_taken = 0;

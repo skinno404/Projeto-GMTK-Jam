@@ -39,6 +39,7 @@ if instance_place_list(x, y, obj_enemy_shot, shot_parry_list, true){
 			_deflect.image_angle = _dir;
 			_deflect.source = source;
 			_deflect.shot_pitch += 0.75;
+			_deflect.parry = true;
 
 			_shot_list_checked[|i ] = shot_parry_list[| i];
 
@@ -53,7 +54,7 @@ if instance_place_list(x, y, obj_enemy_shot, shot_parry_list, true){
 	}
 
 	global.scores += irandom_range(25, 40);
-	obj_player.hp = obj_player.max_hp;
+	obj_player.hp = obj_player.hp_gain + obj_player.hp_gain/2;
 	audio_stop_sound(snd_swing2);
 	audio_stop_sound(snd_swing1);
 	audio_emitter_position(sword_sound_emitter, x - obj_player.x * 0.8, y - obj_player.y * 0.8, 0);

@@ -8,7 +8,7 @@ function scr_enemy_shot(){
 
 	if take_turn == true and global.died == false{
 
-		if abs(obj_player.x - x) < aggro_range and abs(obj_player.y - y) < aggro_range and !collision_line(x, y, obj_player.x, obj_player.y, obj_collision, false, false){
+		if abs(obj_player.x - x) < aggro_range and abs(obj_player.y - y) < aggro_range and free_sight{
 
 			path_clear_points(path);
 			take_turn = false;

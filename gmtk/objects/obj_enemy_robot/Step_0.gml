@@ -24,12 +24,13 @@ if(instance_exists(obj_player_shot)){
 }
 
 if distance_to_object(obj_player_shot) < 80{
-	if(parry = true){
-		take_turn = true;
+
+	if parry and obj_player_shot.parry == false and can_attack{
+
 		can_attack = false;
 		path_clear_points(path);
 		estate = atk_estate;
-		alarm[1] = 12;
+		alarm[1] = 32;
 		var _attack = instance_create_depth(x + lengthdir_x(18, aim_direction), y - 12 + lengthdir_y(12, aim_direction), 0, obj_enemy_atk);
 		_attack.start_x = x;
 		_attack.start_y = y;

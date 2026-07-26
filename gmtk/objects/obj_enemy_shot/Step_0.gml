@@ -26,11 +26,7 @@ if place_meeting(x, y, obj_player){
 
 	}
 
-}
-
-if distance_to_point(start_x, start_y) > 16{
-
-	speed = 16;
+	instance_destroy();
 
 }
 

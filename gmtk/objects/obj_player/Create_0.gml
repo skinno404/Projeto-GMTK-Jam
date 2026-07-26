@@ -50,7 +50,7 @@ aim_distance = 28;
 
 hp = 10;
 max_hp = 10;
-hp_gain = 2.8;
+hp_gain = 3.2;
 invulnerable = false;
 fight_or_flight = false;
 hit = false;

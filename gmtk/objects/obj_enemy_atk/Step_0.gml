@@ -33,7 +33,7 @@ if instance_place_list(x, y, obj_player_shot, shot_parry_list, true){
 			var _dir = point_direction(x, y, obj_player.x, obj_player.y);
 
 			var _deflect = instance_create_depth(shot_parry_list[| i].x, shot_parry_list[| i].y, 0, obj_enemy_shot);
-			_deflect.speed = shot_parry_list[| i].speed * 0.8;
+			_deflect.speed = shot_parry_list[| i].speed * 0.6;
 			_deflect.start_x = shot_parry_list[| i].x;
 			_deflect.start_y = shot_parry_list[| i].y;
 			_deflect.direction = _dir;

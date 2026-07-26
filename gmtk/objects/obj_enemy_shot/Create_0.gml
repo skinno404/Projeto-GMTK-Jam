@@ -8,7 +8,7 @@ shot_pitch = 1;
 hit = false;
 can_destroy = true;
 
-speed = 2;
+speed = 16;
 image_angle = direction;
 
 shot_sound_emitter = audio_emitter_create();
