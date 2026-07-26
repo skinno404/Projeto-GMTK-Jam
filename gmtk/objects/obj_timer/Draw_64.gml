@@ -1,3 +1,5 @@
+draw_set_font(fnt_aeroblade);
+
 var _guiw = display_get_gui_width();
 var _guih = display_get_gui_height();
 
@@ -22,4 +24,5 @@ draw_rectangle_colour(
     c_white, c_white, c_white, c_white, false
 );
 
+draw_set_halign(fa_center);
 draw_text_transformed(_guiw/2, _guih - 56, string(obj_player.hp), 2, 2, 0);

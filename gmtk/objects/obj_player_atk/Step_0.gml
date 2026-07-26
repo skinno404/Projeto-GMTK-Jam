@@ -49,6 +49,8 @@ if instance_place_list(x, y, obj_enemy_shot, shot_parry_list, true){
 		instance_destroy(shot_parry_list[| j]);
 
 	}
+
+	global.scores += irandom_range(25, 40);
 	obj_player.hp = obj_player.max_hp;
 	audio_stop_sound(snd_swing2);
 	audio_stop_sound(snd_swing1);

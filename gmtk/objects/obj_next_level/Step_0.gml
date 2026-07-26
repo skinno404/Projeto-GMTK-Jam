@@ -1,5 +1,6 @@
 if(place_meeting(x,y,obj_player)){
-	
+
+	obj_player.can_move = false;
 	global.in_hud = true;
 	
 }else{

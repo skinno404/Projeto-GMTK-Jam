@@ -9,4 +9,5 @@ damage = 2;
 estate = scr_enemy_idle;
 atk_estate = scr_orea_seca_atk;
 
-type = spr_enemy_torret_dead;
+type = "oreaseca";
+dead_spr = spr_enemy_torret_dead;

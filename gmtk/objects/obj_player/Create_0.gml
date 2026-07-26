@@ -26,6 +26,7 @@ vspd = 0;
 spd = 5.5;
 move_dir = 0;
 move_spd = 0;
+can_move = true;
 
 attack = 0;
 can_attack = true;

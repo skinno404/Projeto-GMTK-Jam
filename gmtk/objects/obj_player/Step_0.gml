@@ -20,7 +20,11 @@ hp -= 0.03;
 
 hp = clamp(hp, 0, max_hp);
 
-script_execute(estate);
+if can_move == true{
+
+	script_execute(estate);
+
+}
 
 var test = keyboard_check_pressed(ord("L"));
 

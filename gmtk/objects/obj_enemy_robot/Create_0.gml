@@ -16,4 +16,5 @@ parry = -1;
 t_part = false;
 t_delay = 6;
 
-type = spr_enemy_drone_dead;
+type = "robot";
+dead_spr = spr_enemy_drone_dead;

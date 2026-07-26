@@ -14,9 +14,9 @@
 		squash = false;	
 		target = 0;
 	}
-	
+
 if(global.in_hud){
-	
+
 	can_show_hud = true;
 	alpha_hud = approach(alpha_hud,1,0.1);
 	hud_scale = lerp(hud_scale,2,0.05);

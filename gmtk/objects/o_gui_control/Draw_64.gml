@@ -10,6 +10,8 @@
 
 if(global.in_hud || alpha_hud > 0){
 
+	draw_set_font(fnt_alien);
+
 	var w = camera_get_view_width(0);
 	var h = camera_get_view_height(0);
 	draw_set_colour(c_black);
@@ -41,8 +43,10 @@ if(global.in_hud || alpha_hud > 0){
 	}
 	
 	if(killed_temp >= enemy_temp){
+		draw_set_font(fnt_clear);
 		draw_set_colour(c_yellow);
-		draw_text_transformed(w/2+75,h/2-95,"CLEAR",2,hud_scale,-40);
+		draw_text_transformed(w/2+50,h/2-100,"CLEAR",2,hud_scale,-20);
+		draw_set_font(fnt_alien);
 	}
 	
 	draw_set_halign(fa_right);
@@ -95,9 +99,12 @@ draw_rectangle(0,0,w,h,false);
 var w = camera_get_view_width(0);
 var h = camera_get_view_height(0);
 if(global.actual_combo > 0){
-draw_text_transformed(w/2+700,h/2-450,string(global.actual_combo) + "X",2,2,-20);
+draw_text_transformed(w/2+700,h/2-450,string(global.actual_combo) + "X",2,2,-12);
+draw_sprite_ext(spr_combo_bar, 0, w/2+640, h/2 - 426, 5 * alarm[0]/global.combo_delay, 3, -12, c_white, 1);
+draw_set_halign(fa_center);
+draw_text_transformed(w/2+660,h/2-420,string(global.scores),2,2,-12);
 if(alarm[0] < 0){
-	alarm[0] = global.combo_delay;	
+	alarm[0] = global.combo_delay - (global.actual_combo);	
 }
 }
 

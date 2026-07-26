@@ -27,4 +27,5 @@ can_target = false;
 offset_y = 0;
 always_top = false;
 
-type = spr_enemy_drone_dead;
+type = "drone";
+dead_spr = spr_enemy_drone_dead;
